@@ -37,6 +37,14 @@ if ( ! function_exists( 'ktf2021_header_style' ) ) :
 	function ktf2021_header_style() {
 		$header_text_color = get_header_textcolor();
 
+		
+		/**
+		 * Google Chrome Theme
+		 */
+		?>
+		<meta name="theme-color" content="<?php echo get_theme_mod('google_chrome_theme'); ?>">
+		<?php
+
 		/*
 		 * If no custom options for text are set, let's bail.
 		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).

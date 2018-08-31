@@ -15,6 +15,27 @@ function ktf2021_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	$wp_customize->add_section('chrome_options', array(
+        'title'    => __('Google Chrome', 'ktf2021'),
+        'description' => 'Set Settings for Google Chrome',
+        'priority' => 120,
+	));
+
+	//  =============================
+    //  = Google Chrome Theme       =
+    //  =============================
+    $wp_customize->add_setting('google_chrome_theme', array(
+        'default'           => '#000000',
+        'transport'         => 'refresh' 
+	));
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'google_chrome_theme_control', array(
+        'label'    => __('Google Chrome Theme Color', 'ktf2021'),
+        'description' => 'The color of the tab in Google Chrome',
+        'section'  => 'chrome_options',
+        'settings' => 'google_chrome_theme',
+    )));
+	
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
