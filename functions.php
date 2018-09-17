@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'ktf2021_widgets_init' );
 function ktf2021_scripts() {
 	wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
 
-	wp_enqueue_style( 'ktf2021-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'ktf2021-style', get_template_directory_uri() . '/sass/style.css' );
 
 	wp_enqueue_script( 'ktf2021-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

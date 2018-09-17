@@ -45,7 +45,8 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
+			<!-- Button to close the overlay navigation -->
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -53,6 +54,22 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+		
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick="openNav()"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
+
+		<script>
+			/* Open */
+			function openNav() {
+				console.log("open Nav");
+				
+				document.getElementById("site-navigation").style.height = "100%";
+			}
+
+			/* Close */
+			function closeNav() {
+				document.getElementById("site-navigation").style.height = "0%";
+			}
+		</script>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
