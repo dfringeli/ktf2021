@@ -14,7 +14,6 @@
     transition: 0.5s;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -82,10 +81,21 @@
 	}
 }
 
+.menu {
+    top: 20px;	
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.closebtn {
+	float: right;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
 }
 
 @media screen and (min-width: 37.5em) {

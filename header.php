@@ -55,8 +55,17 @@
 			?>
 		</nav><!-- #site-navigation -->
 		
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick="openNav()"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
-
+		<div class="menu-header d-flex flex-row">
+			<div class="menu-header-logo p-2 m-auto">
+				<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo.svg" ?>" />
+			</div>
+			<div class="menu-header-control p-2">
+				<button class="menu-search">Suche</button>
+			</div>
+			<div class="menu-header-control p-2">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick="openNav()"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
+			</div>
+		</div>
 		<script>
 			/* Open */
 			function openNav() {
