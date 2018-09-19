@@ -42,6 +42,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+## Site Sections Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -640,6 +643,23 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.main-search {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .main-navigation {
   clear: both;
   display: block;
@@ -902,14 +922,138 @@ a:hover, a:active {
   display: block;
 }
 
-.site {
+.ktf2021-content {
   margin: 1vh 1vw;
+  -webkit-transform: skewY(1.2deg);
+  transform: skewY(1.2deg);
+  -webkit-animation: fade-in 0.75s;
+          animation: fade-in 0.75s;
 }
 
 @media (min-width: 992px) {
-  .site {
-    margin: 1vh 20vw;
+  .ktf2021-content {
+    margin: 1vh 7.5vw;
   }
+}
+
+@media (min-width: 1200px) {
+  .ktf2021-content {
+    margin: 1vh 15vw;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.diagonal-container {
+  height: 400px;
+  padding: 20px;
+  margin-bottom: 20px;
+  -webkit-transform: skewY(-1.2deg);
+  transform: skewY(-1.2deg);
+  overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+## Site Sections
+--------------------------------------------------------------*/
+.site-header {
+  background-color: black;
+  height: 20vh;
+  margin-bottom: 50px;
+  margin-top: -50px;
+  padding-top: 50px;
+  -webkit-transform: skewY(-1.2deg);
+  transform: skewY(-1.2deg);
+}
+
+.site-header .menu-header {
+  position: relative;
+  -webkit-transform: skewY(1.2deg);
+  transform: skewY(1.2deg);
+}
+
+.site-header .menu-header-palme {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 80;
+  width: 30%;
+}
+
+.site-header .menu-header-logo {
+  position: absolute;
+  top: 2vh;
+  left: 50%;
+}
+
+.site-header .menu-header-controls {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.site-footer {
+  width: 100%;
+  position: absolute;
+}
+
+.site-info {
+  height: 20px;
+  padding: 20px 0;
+  background-color: rgba(0, 207, 255, 0.95);
+  -webkit-transform: skewY(-1.2deg);
+  transform: skewY(-1.2deg);
+}
+
+.site-info-content {
+  padding-bottom: 2vh;
+  background-color: rgba(0, 207, 255, 0.95);
+  -webkit-transform: skewY(1.2deg);
+  transform: skewY(1.2deg);
+}
+
+.ktf2021-container-white, .ktf2021-container-black, .ktf2021-container-blue, .ktf2021-container-green {
+  padding: 5vh 0;
+  -webkit-transform: skewY(-1.2deg);
+  transform: skewY(-1.2deg);
+}
+
+.ktf2021-container-white {
+  color: black;
+}
+
+.ktf2021-container-black {
+  background-color: black;
+  color: white;
+}
+
+.ktf2021-container-blue {
+  background-color: rgba(0, 207, 255, 0.95);
+  color: white;
+}
+
+.ktf2021-container-green {
+  background-color: #a3d01e;
+  color: white;
 }
 
 /*--------------------------------------------------------------

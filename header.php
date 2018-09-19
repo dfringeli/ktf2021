@@ -22,59 +22,57 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ktf2021' ); ?></a>
-
+	<nav id="site-search" class="main-search">
+		<!-- Button to close the overlay navigation -->
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+		<p>
+			search form
+		</p>
+	</nav><!-- #site-navigation -->
+	<nav id="site-navigation" class="main-navigation">
+		<!-- Button to close the overlay navigation -->
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'menu-1',
+			'menu_id'        => 'primary-menu',
+		) );
+		?>
+	</nav><!-- #site-navigation -->
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ktf2021_description = get_bloginfo( 'description', 'display' );
-			if ( $ktf2021_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ktf2021_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<!-- Button to close the overlay navigation -->
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-		
 		<div class="menu-header d-flex flex-row">
-			<div class="menu-header-logo p-2 m-auto">
+			<div class="menu-header-palme d-none d-lg-block">
+				<img src="<?php echo get_template_directory_uri() . "/images/palme.svg" ?>" width="290px" />
+			</div>
+			<div class="menu-header-logo m-auto">
 				<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo.svg" ?>" />
 			</div>
-			<div class="menu-header-control p-2">
-				<button class="menu-search">Suche</button>
-			</div>
-			<div class="menu-header-control p-2">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" onClick="openNav()"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
+			<div class="menu-header-controls p-2 d-flex flex-row">
+				<div class="menu-header-control p-2">
+					<button class="menu-search" onClick="openSearch()">Suche</button>
+				</div>
+				<div class="menu-header-control p-2">
+					<button class="menu-toggle" onClick="openNav()"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
+				</div>
 			</div>
 		</div>
 		<script>
-			/* Open */
+			/* Open Search */
+			function openSearch() {					
+				document.getElementById("site-search").style.height = "100%";
+			}
+
+			/* Close Search */
+			function closeSearch() {
+				document.getElementById("site-search").style.height = "0%";
+			}
+
+			/* Open Navigation */
 			function openNav() {
-				console.log("open Nav");
-				
 				document.getElementById("site-navigation").style.height = "100%";
 			}
 
-			/* Close */
+			/* Close Navigation */
 			function closeNav() {
 				document.getElementById("site-navigation").style.height = "0%";
 			}

@@ -11,12 +11,140 @@
 --------------------------------------------------------------*/
 @import "primary/comments";
 
-.site {
+$skew: 1.2deg;
+$skew_negative: -1 * $skew;
+
+.ktf2021-content {
     margin: 1vh 1vw;
+    -webkit-transform: skewY($skew);
+    -moz-transform: skewY($skew);
+    -ms-transform: skewY($skew);
+    -o-transform: skewY($skew);
+    transform: skewY($skew);
+    animation: fade-in 0.75s;
 }
 
 @media (min-width: 992px) {
-    .site {
-        margin: 1vh 20vw;
+    .ktf2021-content {
+        margin: 1vh 7.5vw;
     }
+}
+@media (min-width: 1200px) {
+    .ktf2021-content {
+        margin: 1vh 15vw;
+    }
+ }
+
+@keyframes fade-in {
+    from {opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1) }
+    to {opacity: 1;}
+}
+
+.diagonal-container {
+    height: 400px;
+    padding: 20px;
+    margin-bottom: 20px;
+    -webkit-transform: skewY($skew_negative);
+    -moz-transform: skewY($skew_negative);
+    -ms-transform: skewY($skew_negative);
+    -o-transform: skewY($skew_negative);
+    transform: skewY($skew_negative);
+    overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+## Site Sections
+--------------------------------------------------------------*/
+.site-header {
+    background-color: $color__background-site-header;
+    height: 20vh;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    padding-top: 50px;
+    -webkit-transform: skewY($skew_negative);
+    -moz-transform: skewY($skew_negative);
+    -ms-transform: skewY($skew_negative);
+    -o-transform: skewY($skew_negative);
+    transform: skewY($skew_negative);
+
+	.menu-header {
+        position: relative;
+        -webkit-transform: skewY($skew);
+        -moz-transform: skewY($skew);
+        -ms-transform: skewY($skew);
+        -o-transform: skewY($skew);
+        transform: skewY($skew);
+	}
+	
+	.menu-header-palme {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+        z-index: 80;
+        width: 30%;
+    }
+    
+    .menu-header-logo {
+        position: absolute;
+        top: 2vh;
+        left: 50%;
+    }
+
+    .menu-header-controls {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+.site-footer {
+    width: 100%;
+    position: absolute;
+}
+
+.site-info {
+    height: 20px;
+    padding: 20px 0;
+    background-color: $color__background-footer-end;
+    -webkit-transform: skewY($skew_negative);
+    -moz-transform: skewY($skew_negative);
+    -ms-transform: skewY($skew_negative);
+    -o-transform: skewY($skew_negative);
+    transform: skewY($skew_negative);
+}
+
+.site-info-content {
+    padding-bottom: 2vh;
+    background-color: $color__background-footer-end;
+    -webkit-transform: skewY($skew);
+    -moz-transform: skewY($skew);
+    -ms-transform: skewY($skew);
+    -o-transform: skewY($skew);
+    transform: skewY($skew);
+}
+
+.ktf2021-container-white, .ktf2021-container-black, .ktf2021-container-blue, .ktf2021-container-green {
+    padding: 5vh 0;
+    -webkit-transform: skewY($skew_negative);
+    -moz-transform: skewY($skew_negative);
+    -ms-transform: skewY($skew_negative);
+    -o-transform: skewY($skew_negative);
+    transform: skewY($skew_negative);
+}
+
+.ktf2021-container-white, {
+    color: $color__black;
+}
+
+.ktf2021-container-black, {
+    background-color: $color__black;
+    color: $color__white;
+}
+
+.ktf2021-container-blue, {
+    background-color: $color__blue;
+    color: $color__white;
+}
+
+.ktf2021-container-green, {
+    background-color: $color__green;
+    color: $color__white;
 }
