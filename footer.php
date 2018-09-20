@@ -14,7 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info text-right ">
+		<div class="footer-navigation sticky-bottom">
+			<div class="footer-navigation-content">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+			</div>
+		</div>
+		<div class="site-info sticky-bottom">
 			<div class="site-info-content">
 				<span class="ktf2021-content">
 					© Copyright KTF2021, <?php echo date("Y"); ?>

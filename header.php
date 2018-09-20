@@ -40,8 +40,8 @@
 		?>
 	</nav><!-- #site-navigation -->
 	<header id="masthead" class="site-header">
-		<div class="menu-header d-flex flex-row">
-			<div class="menu-header-palme d-none d-lg-block">
+		<div class="menu-header d-flex flex-row d-none d-lg-block">
+			<div class="menu-header-palme">
 				<img src="<?php echo get_template_directory_uri() . "/images/palme.svg" ?>" width="290px" />
 			</div>
 			<div class="menu-header-logo m-auto">
