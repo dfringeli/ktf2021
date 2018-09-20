@@ -901,7 +901,6 @@ a:hover, a:active {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
@@ -978,7 +977,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-header {
   background-color: black;
-  height: 20vh;
+  height: 30vh;
   margin-top: -50px;
   padding-top: 50px;
   -webkit-transform: skewY(-1.2deg);
@@ -996,12 +995,17 @@ a:hover, a:active {
   left: 0px;
   z-index: 999;
   width: 30%;
+  position: absolute;
 }
 
 .site-header .menu-header-logo {
   position: absolute;
   top: 2vh;
   left: 50%;
+}
+
+.site-header .menu-header-logo img {
+  height: 30vh;
 }
 
 .site-header .menu-header-controls {
@@ -1067,10 +1071,11 @@ a:hover, a:active {
 }
 
 .ktf2021-container-carousel {
+  padding: 3vh 0;
   height: 300px;
   overflow: hidden;
-  z-index: 2;
-  padding-top: -50px;
+  z-index: -1;
+  position: relative;
 }
 
 /*--------------------------------------------------------------
