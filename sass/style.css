@@ -1028,7 +1028,7 @@ a:hover, a:active {
 }
 
 .site-info {
-  background-color: red;
+  background-color: rgba(19, 164, 197, 0.95);
   z-index: 0;
   bottom: 0px;
   width: 100%;
@@ -1061,7 +1061,7 @@ a:hover, a:active {
 }
 
 .ktf2021-container-blue {
-  background-color: red;
+  background-color: rgba(19, 164, 197, 0.95);
   color: white;
 }
 
