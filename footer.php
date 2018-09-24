@@ -15,13 +15,29 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="footer-navigation sticky-bottom">
-			<div class="footer-navigation-content">
+			<div class="footer-navigation-content d-flex flex-row">
+
 				<?php
 				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
+					'menu' => 'menu-left',
+					'container_class' => 'flex-fill'
 				) );
 				?>
+
+				<?php
+				wp_nav_menu( array(
+					'menu' => 'menu-middle',
+					'container_class' => 'flex-fill'
+				) );
+				?>
+
+				<?php
+				wp_nav_menu( array(
+					'menu' => 'menu-right',
+					'container_class' => 'flex-fill'
+				) );
+				?>
+
 			</div>
 		</div>
 		<div class="site-info sticky-bottom">

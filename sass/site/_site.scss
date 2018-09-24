@@ -111,17 +111,22 @@ $skew_negative: -1 * $skew;
     width: 100%;
     padding: 0;
 
-    .footer-navigation-content {
+    .footer-navigation-content {        
+        margin: 0 1vw;
         padding: 50px 0;
+        -webkit-transform: skewY($skew);
+        -moz-transform: skewY($skew);
+        -ms-transform: skewY($skew);
+        -o-transform: skewY($skew);
+        transform: skewY($skew);
     }
 }
 
 .site-info {
     background-color: $color__background-footer-end;
     z-index: 0;
-    bottom: 0px;
     width: 100%;
-    padding: 40px 0 10px 0;
+    padding: 40px 0 25px 0;
     margin: 0;
 
     .site-info-content {

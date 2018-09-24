@@ -663,31 +663,26 @@ a:hover, a:active {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%;
   height: 0%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: black;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-y: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.main-navigation ul {
+.menu {
+  top: 20px;
+  font-size: 2em;
   list-style: none;
   margin: 0;
-  padding-left: 0;
-  position: relative;
-  top: 25%;
-  /* 25% from the top */
-  margin-top: 30px;
 }
 
-.main-navigation ul ul {
+.menu ul {
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -697,37 +692,34 @@ a:hover, a:active {
   z-index: 99999;
 }
 
-.main-navigation ul ul ul {
+.menu ul ul {
   left: -999em;
   top: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.menu ul li:hover > ul,
+.menu ul li.focus > ul {
   left: 100%;
 }
 
-.main-navigation ul ul a {
+.menu ul a {
   width: 200px;
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.menu li:hover > ul,
+.menu li.focus > ul {
   left: auto;
 }
 
-.main-navigation li {
-  float: left;
+.menu li {
   position: relative;
+  margin: 2vh 0;
 }
 
-.main-navigation a {
+.menu a {
   display: block;
   text-decoration: none;
-}
-
-.menu {
-  top: 20px;
+  color: white;
 }
 
 /* Small menu. */
@@ -737,10 +729,10 @@ a:hover, a:active {
 }
 
 .closebtn {
-  float: right;
-  top: 20px;
-  right: 45px;
   font-size: 60px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -1024,15 +1016,17 @@ a:hover, a:active {
 }
 
 .footer-navigation .footer-navigation-content {
+  margin: 0 1vw;
   padding: 50px 0;
+  -webkit-transform: skewY(1.2deg);
+  transform: skewY(1.2deg);
 }
 
 .site-info {
   background-color: rgba(19, 164, 197, 0.95);
   z-index: 0;
-  bottom: 0px;
   width: 100%;
-  padding: 40px 0 10px 0;
+  padding: 40px 0 25px 0;
   margin: 0;
 }
 

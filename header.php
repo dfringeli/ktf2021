@@ -24,20 +24,37 @@
 <div id="page" class="site">
 	<nav id="site-search" class="main-search">
 		<!-- Button to close the overlay navigation -->
-		<a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+		<button class="closebtn" onclick="closeSearch()">&times;</button>
 		<p>
 			search form
 		</p>
 	</nav><!-- #site-navigation -->
-	<nav id="site-navigation" class="main-navigation">
-		<!-- Button to close the overlay navigation -->
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'menu-1',
-			'menu_id'        => 'primary-menu',
-		) );
-		?>
+	<nav id="site-navigation" class="main-navigation d-flex flex-column">
+		<span class="closebtn align-self-end mr-5" onclick="closeNav()">&times;</span>
+		<div class="d-flex flex-row">
+
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'menu-left',
+				'container_class' => 'flex-fill'
+			) );
+			?>
+
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'menu-middle',
+				'container_class' => 'flex-fill'
+			) );
+			?>
+
+			<?php
+			wp_nav_menu( array(
+				'menu' => 'menu-right',
+				'container_class' => 'flex-fill'
+			) );
+			?>
+
+		</div>
 	</nav><!-- #site-navigation -->
 	<header id="masthead" class="site-header">
 		<div class="menu-header d-flex flex-row">
