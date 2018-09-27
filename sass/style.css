@@ -915,8 +915,8 @@ a:hover, a:active {
 
 .ktf2021-content {
   margin: 1vh 1vw;
-  -webkit-transform: skewY(1.2deg);
-  transform: skewY(1.2deg);
+  -webkit-transform: skewY(1deg);
+  transform: skewY(1deg);
   -webkit-animation: fade-in 0.75s;
           animation: fade-in 0.75s;
 }
@@ -959,8 +959,8 @@ a:hover, a:active {
   height: 400px;
   padding: 20px;
   margin-bottom: 20px;
-  -webkit-transform: skewY(-1.2deg);
-  transform: skewY(-1.2deg);
+  -webkit-transform: skewY(-1deg);
+  transform: skewY(-1deg);
   overflow: hidden;
 }
 
@@ -972,14 +972,14 @@ a:hover, a:active {
   height: 30vh;
   margin-top: -50px;
   padding-top: 50px;
-  -webkit-transform: skewY(-1.2deg);
-  transform: skewY(-1.2deg);
+  -webkit-transform: skewY(-1deg);
+  transform: skewY(-1deg);
 }
 
 .site-header .menu-header {
   position: relative;
-  -webkit-transform: skewY(1.2deg);
-  transform: skewY(1.2deg);
+  -webkit-transform: skewY(1deg);
+  transform: skewY(1deg);
 }
 
 .site-header .menu-header-palme {
@@ -1007,8 +1007,8 @@ a:hover, a:active {
 
 .footer-navigation {
   background-color: #00cfff;
-  -webkit-transform: skewY(-1.2deg);
-  transform: skewY(-1.2deg);
+  -webkit-transform: skewY(-1deg);
+  transform: skewY(-1deg);
   margin: 0 0 -20px 0;
   z-index: 10;
   width: 100%;
@@ -1018,8 +1018,8 @@ a:hover, a:active {
 .footer-navigation .footer-navigation-content {
   margin: 0 1vw;
   padding: 50px 0;
-  -webkit-transform: skewY(1.2deg);
-  transform: skewY(1.2deg);
+  -webkit-transform: skewY(1deg);
+  transform: skewY(1deg);
 }
 
 .site-info {
@@ -1041,8 +1041,8 @@ a:hover, a:active {
 .ktf2021-container-green,
 .ktf2021-container-carousel {
   padding: 5vh 0;
-  -webkit-transform: skewY(-1.2deg);
-  transform: skewY(-1.2deg);
+  -webkit-transform: skewY(-1deg);
+  transform: skewY(-1deg);
 }
 
 .ktf2021-container-white {
