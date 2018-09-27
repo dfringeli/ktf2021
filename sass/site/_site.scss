@@ -195,10 +195,17 @@ $skew_negative: -1 * $skew;
     color: $color__white;
 }
 
+$carousel_height: 300px;
+
 .ktf2021-container-carousel {
     padding: 3vh 0;
-    height: 300px;
+    height: $carousel_height;
     overflow: hidden;
     z-index: -1;
     position: relative;
+
+    img {
+        height: $carousel_height;
+        object-fit: cover
+    }
 }

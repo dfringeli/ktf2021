@@ -1109,6 +1109,12 @@ a:hover, a:active {
   position: relative;
 }
 
+.ktf2021-container-carousel img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
