@@ -76,7 +76,7 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 1.2em 0;
 }
 
 /* Grouping content
@@ -923,6 +923,13 @@ a:hover, a:active {
 
 .search-container {
   width: 90%;
+  margin-bottom: 10vh;
+}
+
+.btn-ktf2021-search {
+  color: white;
+  background-color: #a3d01e;
+  border-color: #a3d01e;
 }
 
 @media (min-width: 992px) {

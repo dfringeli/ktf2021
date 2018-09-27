@@ -26,6 +26,13 @@ $skew_negative: -1 * $skew;
 
 .search-container {
     width: 90%;
+    margin-bottom: 10vh;
+}
+
+.btn-ktf2021-search {
+    color: $color__white;
+    background-color: $color__green;
+    border-color: $color__green;
 }
 
 @media (min-width: 992px) {
