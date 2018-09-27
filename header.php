@@ -22,12 +22,9 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<nav id="site-search" class="main-search">
-		<!-- Button to close the overlay navigation -->
-		<button class="closebtn" onclick="closeSearch()">&times;</button>
-		<p>
-			search form
-		</p>
+	<nav id="site-search" class="main-search d-flex flex-column">
+		<span class="closebtn align-self-end mr-5" onclick="closeSearch()">&times;</span>
+		<?php get_search_form(); ?>
 	</nav><!-- #site-navigation -->
 	<nav id="site-navigation" class="main-navigation d-flex flex-column">
 		<span class="closebtn align-self-end mr-5" onclick="closeNav()">&times;</span>
@@ -58,9 +55,11 @@
 	</nav><!-- #site-navigation -->
 	<header id="masthead" class="site-header">
 		<div class="menu-header d-flex flex-row">
-			<div class="menu-header-palme d-none d-lg-block">
-				<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/images/palme.svg" ?>" width="290px" />
-			</div>
+			<?php
+				if ( is_front_page() ) {	
+					echo '<div class="menu-header-palme d-none d-lg-block"><img class="img-fluid" src="' . get_template_directory_uri() . '/images/palme.svg" width="290px" /></div>';
+				}
+			?>
 			<div class="menu-header-logo m-auto">
 				<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo.svg" ?>" />
 			</div>
