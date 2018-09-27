@@ -61,7 +61,9 @@
 				}
 			?>
 			<div class="menu-header-logo m-auto">
-				<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo.svg" ?>" />
+				<a href="<?php home_url(); ?>" >
+					<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo.svg" ?>" />
+				</a>
 			</div>
 			<div class="menu-header-controls p-2 d-flex flex-row">
 				<div class="menu-header-control p-2 align-self-center">
