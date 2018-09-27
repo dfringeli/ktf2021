@@ -124,6 +124,9 @@ function ktf2021_scripts() {
 
 	wp_enqueue_style( 'ktf2021-style', get_template_directory_uri() . '/sass/style.css' );
 
+	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+	// <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 	wp_enqueue_script( 'ktf2021-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ktf2021-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
