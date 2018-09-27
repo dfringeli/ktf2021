@@ -72,6 +72,7 @@ $skew_negative: -1 * $skew;
 ## Site Sections
 --------------------------------------------------------------*/
 .site-header {
+	color: $color__white;
     background-color: $color__background-site-header;
     height: 30vh;
     margin-top: -50px;
@@ -113,6 +114,10 @@ $skew_negative: -1 * $skew;
     .menu-header-controls {
         margin-left: auto;
         margin-right: 0;
+
+        i {
+            cursor: pointer;
+        }
     }
 }
     

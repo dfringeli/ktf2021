@@ -644,13 +644,14 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-search {
+  color: white;
   clear: both;
   display: block;
   float: left;
   width: 100%;
   height: 0%;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: black;
@@ -660,13 +661,18 @@ a:hover, a:active {
   transition: 0.5s;
 }
 
+.main-search i {
+  cursor: pointer;
+}
+
 .main-navigation {
+  color: white;
   clear: both;
   display: block;
   width: 100%;
   height: 0%;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
@@ -675,8 +681,7 @@ a:hover, a:active {
   transition: 0.5s;
 }
 
-.menu-search {
-  color: white;
+.main-navigation i {
   cursor: pointer;
 }
 
@@ -988,6 +993,7 @@ a:hover, a:active {
 ## Site Sections
 --------------------------------------------------------------*/
 .site-header {
+  color: white;
   background-color: black;
   height: 30vh;
   margin-top: -50px;
@@ -1024,6 +1030,10 @@ a:hover, a:active {
 .site-header .menu-header-controls {
   margin-left: auto;
   margin-right: 0;
+}
+
+.site-header .menu-header-controls i {
+  cursor: pointer;
 }
 
 .footer-navigation {

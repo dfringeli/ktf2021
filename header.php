@@ -22,12 +22,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<nav id="site-search" class="main-search d-flex flex-column">
-		<span class="closebtn align-self-end mr-5" onclick="closeSearch()">&times;</span>
+	<div id="site-search" class="main-search d-flex flex-column">
+		<i class="far fa-times-circle fa-3x fa-fw algin-self-end ml-auto mr-4 my-4" onclick="closeSearch()"></i>
 		<?php get_search_form(); ?>
-	</nav><!-- #site-navigation -->
+	</div>
 	<nav id="site-navigation" class="main-navigation d-flex flex-column">
-		<span class="closebtn align-self-end mr-5" onclick="closeNav()">&times;</span>
+	<i class="far fa-times-circle fa-3x fa-fw algin-self-end ml-auto mr-4 my-4" onclick="closeNav()"></i>
 		<div class="d-flex flex-row">
 
 			<?php
@@ -68,7 +68,7 @@
 					<i class="fas fa-search fa-3x fa-fw menu-search" onClick="openSearch()"></i>					
 				</div>
 				<div class="menu-header-control p-2 align-self-center">
-					<button class="menu-toggle" onClick="openNav()"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
+					<i class="fas fa-bars fa-3x fa-fw" onClick="openNav()"></i>
 				</div>
 			</div>
 		</div>
