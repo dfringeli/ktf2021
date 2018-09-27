@@ -921,9 +921,16 @@ a:hover, a:active {
           animation: fade-in 0.75s;
 }
 
+.search-container {
+  width: 90%;
+}
+
 @media (min-width: 992px) {
   .ktf2021-content {
     margin: 1vh 7.5vw;
+  }
+  .search-container {
+    width: 50%;
   }
 }
 
