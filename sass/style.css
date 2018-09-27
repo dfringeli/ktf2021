@@ -1020,11 +1020,17 @@ a:hover, a:active {
 .site-header .menu-header-logo {
   position: absolute;
   top: 2vh;
-  left: 50%;
+  left: 5%;
 }
 
 .site-header .menu-header-logo img {
   height: 30vh;
+}
+
+@media (min-width: 992px) {
+  .site-header .menu-header-logo {
+    left: 50%;
+  }
 }
 
 .site-header .menu-header-controls {

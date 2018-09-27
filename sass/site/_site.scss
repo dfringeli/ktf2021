@@ -104,10 +104,16 @@ $skew_negative: -1 * $skew;
     .menu-header-logo {
         position: absolute;
         top: 2vh;
-        left: 50%;
+        left: 5%;
 
         img {
             height: 30vh;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .menu-header-logo {
+            left: 50%;
         }
     }
 
