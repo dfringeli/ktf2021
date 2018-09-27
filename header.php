@@ -64,10 +64,10 @@
 				<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo.svg" ?>" />
 			</div>
 			<div class="menu-header-controls p-2 d-flex flex-row">
-				<div class="menu-header-control p-2">
-					<button class="menu-search" onClick="openSearch()">Suche</button>
+				<div class="menu-header-control p-2 align-self-center">
+					<i class="fas fa-search fa-3x fa-fw menu-search" onClick="openSearch()"></i>					
 				</div>
-				<div class="menu-header-control p-2">
+				<div class="menu-header-control p-2 align-self-center">
 					<button class="menu-toggle" onClick="openNav()"><?php esc_html_e( 'Primary Menu', 'ktf2021' ); ?></button>
 				</div>
 			</div>

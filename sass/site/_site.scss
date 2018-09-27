@@ -33,6 +33,7 @@ $skew_negative: -1 * $skew;
     color: $color__white;
     background-color: $color__green;
     border-color: $color__green;
+    z-index: 0 !important;
 }
 
 @media (min-width: 992px) {
@@ -83,6 +84,7 @@ $skew_negative: -1 * $skew;
 
 	.menu-header {
         position: relative;
+        height: 100%;
         -webkit-transform: skewY($skew);
         -moz-transform: skewY($skew);
         -ms-transform: skewY($skew);
