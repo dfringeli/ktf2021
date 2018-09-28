@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="footer-navigation sticky-bottom">
-			<div class="footer-navigation-content d-flex flex-row">
+			<div class="footer-navigation-content ktf2021-reveal d-flex flex-row">
 
 				<?php
 				wp_nav_menu( array(
@@ -42,7 +42,7 @@
 		</div>
 		<div class="site-info sticky-bottom">
 			<div class="site-info-content">
-				<span class="ktf2021-content">
+				<span class="ktf2021-content ktf2021-reveal">
 					© Copyright KTF2021, <?php echo date("Y"); ?>
 				</span>
 			</div><!-- .site-info-content -->

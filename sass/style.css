@@ -927,8 +927,6 @@ a:hover, a:active {
   margin: 1vh 1vw;
   -webkit-transform: skewY(1deg);
   transform: skewY(1deg);
-  -webkit-animation: fade-in 0.75s;
-          animation: fade-in 0.75s;
 }
 
 .search-container {
@@ -955,28 +953,6 @@ a:hover, a:active {
 @media (min-width: 1200px) {
   .ktf2021-content {
     margin: 1vh 15vw;
-  }
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 200, 0, 1);
-  }
-  to {
-    opacity: 1;
   }
 }
 
