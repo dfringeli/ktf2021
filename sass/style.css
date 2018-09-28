@@ -459,6 +459,11 @@ big {
   font-size: 125%;
 }
 
+.under-title {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -563,6 +568,20 @@ input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
+}
+
+.btn-ktf2021-blue {
+  font-size: 1.5em;
+  color: white;
+  background-color: #00cfff;
+  border-color: #00cfff;
+  border-radius: 0;
+  margin: 1.5vh 0;
+}
+
+.btn-ktf2021-blue:hover {
+  background-color: #a3d01e;
+  border-color: #a3d01e;
 }
 
 input[type="text"],

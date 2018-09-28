@@ -20,3 +20,18 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.btn-ktf2021-blue{
+	font-size: 1.5em;
+	color: $color__white;
+	background-color: $color__blue_light;
+	border-color: $color__blue_light;
+	border-radius: 0;
+	margin: 1.5vh 0;
+}
+
+.btn-ktf2021-blue:hover{
+	background-color: $color__green;
+	border-color: $color__green;
+}
+
