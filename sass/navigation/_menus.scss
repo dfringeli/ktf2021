@@ -31,7 +31,6 @@
     left: 0;
     background-color: rgba(0,0,0, 0.9);
     overflow-y: hidden;
-	transition: 0.5s;
 
 	i {
 		cursor: pointer;
@@ -39,10 +38,10 @@
 }
 
 .menu {
-	top: 20px;
 	font-size: 2em;
 	list-style: none;
 	margin: 0;
+	padding-left: 5vw;
 
 	ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
