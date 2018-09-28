@@ -54,7 +54,7 @@
 		</div>
 	</nav><!-- #site-navigation -->
 	<header id="masthead" class="site-header">
-		<div class="menu-header d-flex flex-row">
+		<div class="menu-header d-flex flex-row pb-2 pb-3">
 			<?php
 				if ( is_front_page() ) {	
 					echo '<div class="menu-header-palme d-none d-lg-block"><img class="img-fluid" src="' . get_template_directory_uri() . '/images/palme.svg" width="290px" /></div>';
@@ -65,7 +65,7 @@
 					<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo.svg" ?>" />
 				</a>
 			</div>
-			<div class="menu-header-controls p-2 d-flex flex-row">
+			<div class="menu-header-controls pr-3 d-flex flex-row">
 				<div class="menu-header-control p-2 align-self-center">
 					<i class="fas fa-search fa-3x fa-fw menu-search" onClick="openSearch()"></i>					
 				</div>
