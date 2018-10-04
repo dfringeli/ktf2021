@@ -698,6 +698,8 @@ a:hover, a:active {
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-y: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main-navigation i {

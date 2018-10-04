@@ -67,10 +67,10 @@
 			</div>
 			<div class="menu-header-controls pr-3 d-flex flex-row">
 				<div class="menu-header-control p-2 align-self-center">
-					<i class="fas fa-search fa-3x fa-fw menu-search" onClick="openSearch()"></i>					
+					<i class="fas fa-search fa-2x fa-fw menu-search" onClick="openSearch()"></i>					
 				</div>
 				<div class="menu-header-control p-2 align-self-center">
-					<i class="fas fa-bars fa-3x fa-fw" onClick="openNav()"></i>
+					<i class="fas fa-bars fa-2x fa-fw" onClick="openNav()"></i>
 				</div>
 			</div>
 		</div>
