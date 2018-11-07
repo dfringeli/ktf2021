@@ -68,7 +68,7 @@ $skew_negative: -1 * $skew;
 .site-header {
 	color: $color__white;
     background-color: $color__background-site-header;
-    height: 30vh;
+    height: 17vh;
     margin-top: -50px;
     padding-top: 50px;
     -webkit-transform: skewY($skew_negative);
@@ -97,11 +97,11 @@ $skew_negative: -1 * $skew;
     
     .menu-header-logo {
         position: absolute;
-        top: 2vh;
+        top: 0;
         left: 5%;
 
         img {
-            height: 30vh;
+            height: 25vh;
         }
     }
 
@@ -155,10 +155,6 @@ $skew_negative: -1 * $skew;
         color: $color__white;
         text-align: right;
     }
-}
-
-.ktf2021-reveal {
-    
 }
 
 .ktf2021-container-white,
