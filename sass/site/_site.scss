@@ -68,7 +68,7 @@ $skew_negative: -1 * $skew;
 .site-header {
 	color: $color__white;
     background-color: $color__background-site-header;
-    height: 17vh;
+    height: 20vh;
     margin-top: -50px;
     padding-top: 50px;
     -webkit-transform: skewY($skew_negative);
@@ -101,13 +101,17 @@ $skew_negative: -1 * $skew;
         left: 5%;
 
         img {
-            height: 25vh;
+            height: 30vh;
         }
     }
 
     @media (min-width: 992px) {
         .menu-header-logo {
-            left: 50%;
+            left: 42.5%;
+
+            img {
+                height: 40vh;
+            }
         }
     }
 
