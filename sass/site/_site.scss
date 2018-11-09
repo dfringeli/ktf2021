@@ -35,7 +35,7 @@ $skew_negative: -1 * $skew;
     z-index: 0 !important;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $size__md) {
     .ktf2021-content {
         margin: 1vh 7.5vw;
     }   
@@ -44,7 +44,7 @@ $skew_negative: -1 * $skew;
         width: 50%;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: $size__lg) {
     .ktf2021-content {
         margin: 1vh 15vw;
     }
@@ -93,7 +93,7 @@ $skew_negative: -1 * $skew;
         }
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: $size__md) {
         .menu-header-logo {
             left: 42.5%;
 
@@ -182,18 +182,29 @@ $skew_negative: -1 * $skew;
     color: $color__white;
 }
 
-$carousel_height: 300px;
+$carousel_height_lg: 300px;
+$carousel_height_sm: 200px;
 
 .ktf2021-container-carousel {
     padding: 3vh 0;
-    height: $carousel_height;
+    height: $carousel_height_lg;
     overflow: hidden;
     z-index: -1;
     position: relative;
 
     img {
-        height: $carousel_height;
+        height: $carousel_height_lg;
         object-fit: cover
+    }
+}
+
+@media (max-width: $size__md) {
+    .ktf2021-container-carousel {
+        height: $carousel_height_sm;
+    
+        img {
+            height: $carousel_height_sm;
+        }
     }
 }
 
@@ -241,14 +252,14 @@ $carousel_height: 300px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $size__md) {
     .ktf2021-ab-news-container {
         .is-grid {
             margin: 1vh 7.5vw;
         }
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: $size__lg) {
     .ktf2021-ab-news-container {
         .is-grid {
             margin: 1vh 15vw;

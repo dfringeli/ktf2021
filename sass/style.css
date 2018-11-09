@@ -1113,6 +1113,15 @@ a:hover, a:active {
      object-fit: cover;
 }
 
+@media (max-width: 992px) {
+  .ktf2021-container-carousel {
+    height: 200px;
+  }
+  .ktf2021-container-carousel img {
+    height: 200px;
+  }
+}
+
 .ktf2021-ab-news-container {
   background-color: black;
   color: black;
