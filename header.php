@@ -23,32 +23,42 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<div id="site-search" class="main-search">
-		<i class="far fa-times-circle fa-3x fa-fw algin-self-end" onclick="closeSearch()"></i>
-		<?php get_search_form(); ?>
-	</div>
-	<nav id="site-navigation" class="main-navigation">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col">			
-					<i class="far fa-times-circle fa-3x fa-fw algin-self-end" onclick="closeNav()"></i>
+			<div class="row my-3">
+				<div class="col">
+					<i class="far fa-times-circle fa-3x fa-fw float-right" onclick="closeSearch()"></i>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg">
+				<div class="col">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav id="site-navigation" class="main-navigation">
+		<div class="container-fluid">
+			<div class="row mt-3">
+				<div class="col">			
+					<i class="far fa-times-circle fa-3x fa-fw float-right" onclick="closeNav()"></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm">
 					<?php
 					wp_nav_menu( array(
 						'menu' => 'menu-left'
 					) );
 					?>
 				</div>
-				<div class="col-lg">
+				<div class="col-sm">
 					<?php
 					wp_nav_menu( array(
 						'menu' => 'menu-middle'
 					) );
 					?>
 				</div>
-				<div class="col-lg">
+				<div class="col-sm">
 					<?php
 					wp_nav_menu( array(
 						'menu' => 'menu-right'
