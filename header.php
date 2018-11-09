@@ -22,35 +22,40 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<div id="site-search" class="main-search d-flex flex-column">
-		<i class="far fa-times-circle fa-3x fa-fw algin-self-end ml-auto mr-4 my-4" onclick="closeSearch()"></i>
+	<div id="site-search" class="main-search">
+		<i class="far fa-times-circle fa-3x fa-fw algin-self-end" onclick="closeSearch()"></i>
 		<?php get_search_form(); ?>
 	</div>
-	<nav id="site-navigation" class="main-navigation d-flex flex-column">
-	<i class="far fa-times-circle fa-3x fa-fw algin-self-end ml-auto mr-4 my-4" onclick="closeNav()"></i>
-		<div class="d-flex flex-row">
-
-			<?php
-			wp_nav_menu( array(
-				'menu' => 'menu-left',
-				'container_class' => 'flex-fill'
-			) );
-			?>
-
-			<?php
-			wp_nav_menu( array(
-				'menu' => 'menu-middle',
-				'container_class' => 'flex-fill'
-			) );
-			?>
-
-			<?php
-			wp_nav_menu( array(
-				'menu' => 'menu-right',
-				'container_class' => 'flex-fill'
-			) );
-			?>
-
+	<nav id="site-navigation" class="main-navigation">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">			
+					<i class="far fa-times-circle fa-3x fa-fw algin-self-end" onclick="closeNav()"></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg">
+					<?php
+					wp_nav_menu( array(
+						'menu' => 'menu-left'
+					) );
+					?>
+				</div>
+				<div class="col-lg">
+					<?php
+					wp_nav_menu( array(
+						'menu' => 'menu-middle'
+					) );
+					?>
+				</div>
+				<div class="col-lg">
+					<?php
+					wp_nav_menu( array(
+						'menu' => 'menu-right'
+					) );
+					?>
+				</div>
+			</div>
 		</div>
 	</nav><!-- #site-navigation -->
 	<header id="masthead" class="site-header">
