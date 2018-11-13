@@ -111,8 +111,9 @@ $skew_negative: -1 * $skew;
             cursor: pointer;
         }
     }
-    
-    .menu-list {
+}
+
+.menu-list {
     a {
         color:white;
         transition:.5s;
@@ -120,9 +121,8 @@ $skew_negative: -1 * $skew;
         -ms-transition:.5s;
         -moz-transition:.5s;
         -webkit-transition:.5s;
-        }
-        a:hover { color: gray; }
     }
+    a:hover { color: gray; }
 }
     
 .footer-navigation {
@@ -145,19 +145,6 @@ $skew_negative: -1 * $skew;
         -ms-transform: skewY($skew);
         -o-transform: skewY($skew);
         transform: skewY($skew);
-    }
-
-    
-    .menu-list {
-        a {
-            color:white;
-            transition:.5s;
-            -o-transition:.5s;
-            -ms-transition:.5s;
-            -moz-transition:.5s;
-            -webkit-transition:.5s;
-        }
-        a:hover { color: gray; }
     }
 }
 
