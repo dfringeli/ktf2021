@@ -18,21 +18,21 @@
 			<div class="footer-navigation-content ktf2021-reveal">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg">
+						<div class="col-sm menu-list">
 							<?php
 							wp_nav_menu( array(
 								'menu' => 'menu-left'
 							) );
 							?>
 						</div>
-						<div class="col-lg">
+						<div class="col-sm menu-list">
 							<?php
 							wp_nav_menu( array(
 								'menu' => 'menu-middle'
 							) );
 							?>
 						</div>
-						<div class="col-lg">
+						<div class="col-sm menu-list">
 							<?php
 							wp_nav_menu( array(
 								'menu' => 'menu-right'

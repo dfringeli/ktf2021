@@ -1039,6 +1039,19 @@ a:hover, a:active {
   cursor: pointer;
 }
 
+.site-header .menu-list a {
+  color: white;
+  transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+}
+
+.site-header .menu-list a:hover {
+  color: gray;
+}
+
 .footer-navigation {
   background-color: #00cfff;
   -webkit-transform: skewY(-1deg);
@@ -1054,6 +1067,19 @@ a:hover, a:active {
   padding: 50px 0;
   -webkit-transform: skewY(1deg);
   transform: skewY(1deg);
+}
+
+.footer-navigation .menu-list a {
+  color: white;
+  transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+}
+
+.footer-navigation .menu-list a:hover {
+  color: gray;
 }
 
 .site-info {
