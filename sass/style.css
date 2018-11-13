@@ -989,7 +989,7 @@ a:hover, a:active {
 .site-header {
   color: white;
   background-color: black;
-  height: 20vh;
+  height: 30vh;
   margin-top: -50px;
   padding-top: 50px;
   -webkit-transform: skewY(-1deg);
@@ -1013,8 +1013,8 @@ a:hover, a:active {
 
 .site-header .menu-header-logo {
   position: absolute;
-  top: 0;
-  left: 5%;
+  top: 5vh;
+  left: 5vw;
 }
 
 .site-header .menu-header-logo img {
