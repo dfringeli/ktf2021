@@ -21,53 +21,53 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<div id="site-search" class="main-search">
-		<div class="container-fluid">
-			<div class="row my-3">
-				<div class="col">
-					<i class="far fa-times-circle fa-3x fa-fw float-right" onclick="closeSearch()"></i>
-				</div>
+<div id="site-search" class="main-search"  aria-hidden="true">
+	<div class="container-fluid">
+		<div class="row my-3">
+			<div class="col">
+				<i class="far fa-times-circle fa-3x fa-fw float-right" onclick="toggleSearch(this)"></i>
 			</div>
-			<div class="row">
-				<div class="col">
-					<?php get_search_form(); ?>
-				</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<?php get_search_form(); ?>
 			</div>
 		</div>
 	</div>
-	<nav id="site-navigation" class="main-navigation">
-		<div class="container-fluid">
-			<div class="row mt-3">
-				<div class="col">			
-					<i class="far fa-times-circle fa-3x fa-fw float-right" onclick="closeNav()"></i>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm menu-list">
-					<?php
-					wp_nav_menu( array(
-						'menu' => 'menu-left'
-					) );
-					?>
-				</div>
-				<div class="col-sm menu-list">
-					<?php
-					wp_nav_menu( array(
-						'menu' => 'menu-middle'
-					) );
-					?>
-				</div>
-				<div class="col-sm menu-list">
-					<?php
-					wp_nav_menu( array(
-						'menu' => 'menu-right'
-					) );
-					?>
-				</div>
+</div> <!-- #site-search -->
+<div id="site-navigation" class="main-navigation" aria-hidden="true">
+	<div class="container-fluid">
+		<div class="row mt-3">
+			<div class="col">
+				<i class="far fa-times-circle fa-3x fa-fw float-right close-navigation" onclick="toggleNavigation(this)"></i>
 			</div>
 		</div>
-	</nav><!-- #site-navigation -->
+		<div class="row">
+			<div class="col-sm menu-list">
+				<?php
+				wp_nav_menu( array(
+					'menu' => 'menu-left'
+				) );
+				?>
+			</div>
+			<div class="col-sm menu-list">
+				<?php
+				wp_nav_menu( array(
+					'menu' => 'menu-middle'
+				) );
+				?>
+			</div>
+			<div class="col-sm menu-list">
+				<?php
+				wp_nav_menu( array(
+					'menu' => 'menu-right'
+				) );
+				?>
+			</div>
+		</div>
+	</div>
+</div><!-- #site-navigation -->
+<div id="page" class="site">
 	<header id="masthead" class="site-header">
 		<div class="menu-header d-flex flex-row pb-2 pb-3">
 			<?php
@@ -82,32 +82,51 @@
 			</div>
 			<div class="menu-header-controls pr-3 d-flex flex-row">
 				<div class="menu-header-control p-2 align-self-center">
-					<i class="fas fa-search fa-2x fa-fw menu-search" onClick="openSearch()"></i>					
+					<i class="fas fa-search fa-2x fa-fw open-search" onclick="toggleSearch(this)"></i>					
 				</div>
 				<div class="menu-header-control p-2 align-self-center">
-					<i class="fas fa-bars fa-2x fa-fw" onClick="openNav()"></i>
+					<i class="fas fa-bars fa-2x fa-fw open-navigation" onclick="toggleNavigation(this)"></i>
 				</div>
 			</div>
 		</div>
 		<script>
-			/* Open Search */
-			function openSearch() {					
-				document.getElementById("site-search").style.height = "100%";
-			}
 
-			/* Close Search */
-			function closeSearch() {
-				document.getElementById("site-search").style.height = "0%";
-			}
+			var body = document.body;
+			var mainNavigation = document.querySelector('.main-navigation');
+			var mainSearch = document.querySelector('.main-search');
 
-			/* Open Navigation */
-			function openNav() {
-				document.getElementById("site-navigation").style.height = "100%";
-			}
+			function toggleNavigation(btn) {
+				/* Detect the button class name */
+				var overlayNavigationOpen = btn.classList.contains('open-navigation');
 
-			/* Close Navigation */
-			function closeNav() {
-				document.getElementById("site-navigation").style.height = "0%";
+				/* Toggle the aria-hidden state on the overlay and the 
+					no-scroll class on the body */
+				mainNavigation.setAttribute('aria-hidden', !overlayNavigationOpen);
+				body.classList.toggle('noscroll', overlayNavigationOpen);
+
+				/* On some mobile browser when the overlay was previously
+					opened and scrolled, if you open it again it doesn't 
+					reset its scrollTop property */
+				setTimeout(function() {
+					mainNavigation.scrollTop = 0;
+				}, 750)
+			}
+			
+			function toggleSearch(btn) {
+				/* Detect the button class name */
+				var overlaySearchOpen = btn.classList.contains('open-search');
+
+				/* Toggle the aria-hidden state on the overlay and the 
+					no-scroll class on the body */
+				mainSearch.setAttribute('aria-hidden', !overlaySearchOpen);
+				body.classList.toggle('noscroll', overlaySearchOpen);
+
+				/* On some mobile browser when the overlay was previously
+					opened and scrolled, if you open it again it doesn't 
+					reset its scrollTop property */
+				setTimeout(function() {
+					mainSearch.scrollTop = 0;
+				}, 750)
 			}
 		</script>
 	</header><!-- #masthead -->
