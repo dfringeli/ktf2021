@@ -44,6 +44,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 ## Site Sections Colors
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Condensed PT Medium"), url("../fonts/futura-condensed-pt-medium-589e44ed1e3a5.woff") format("woff");
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -393,7 +400,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: "Arial Narrow", Arial, Helvetica;
+  font-family: "Futura", "Arial Narrow", Arial, Helvetica;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
