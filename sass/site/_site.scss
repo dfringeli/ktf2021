@@ -89,16 +89,16 @@ $skew_negative: -1 * $skew;
         left: 5vw;
 
         img {
-            height: 30vh;
+            height: 25vh;
         }
     }
 
     @media (min-width: $size__md) {
         .menu-header-logo {
-            left: 42.5%;
+            left: 45%;
 
             img {
-                height: 40vh;
+                height: 35vh;
             }
         }
     }
@@ -137,8 +137,7 @@ $skew_negative: -1 * $skew;
     width: 100%;
     padding: 0;
 
-    .footer-navigation-content {        
-        margin: 0 1vw;
+    .footer-navigation-content {
         padding: 50px 0;
         -webkit-transform: skewY($skew);
         -moz-transform: skewY($skew);
@@ -149,11 +148,16 @@ $skew_negative: -1 * $skew;
 }
 
 .site-info {
-    background-color: $color__background-footer-end;
+    background-color: $color__black;
     z-index: 0;
     width: 100%;
-    padding: 40px 0 25px 0;
     margin: 0;
+
+    .site-info-background {
+        background-color: $color__background-footer-end;
+        padding: 40px 0 25px 0;
+        margin: 0;
+    }
 
     .site-info-content {
         color: $color__white;
@@ -167,7 +171,8 @@ $skew_negative: -1 * $skew;
 .ktf2021-container-green,
 .ktf2021-container-carousel,
 .ktf2021-ab-news-container {
-    padding: 5vh 0;
+    margin: 2vh 0;
+    padding: 4vh 0;
     -webkit-transform: skewY($skew_negative);
     -moz-transform: skewY($skew_negative);
     -ms-transform: skewY($skew_negative);
@@ -176,6 +181,7 @@ $skew_negative: -1 * $skew;
 }
 
 .ktf2021-container-white, {
+    background-color: $color__white;
     color: $color__black;
 }
 
@@ -198,7 +204,7 @@ $carousel_height_lg: 300px;
 $carousel_height_sm: 200px;
 
 .ktf2021-container-carousel {
-    padding: 3vh 0;
+    padding: 0;
     height: $carousel_height_lg;
     overflow: hidden;
     z-index: -1;

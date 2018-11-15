@@ -15,7 +15,8 @@ textarea {
 @import "copy";
 
 .under-title {
-	font-size: 1.75em;
+	font-family: $font__heading;
+	font-size: 2em;
 	font-style: italic;
 	padding: 0;
 	margin: 0;

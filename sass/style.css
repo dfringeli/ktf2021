@@ -400,7 +400,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: "Futura", "Arial Narrow", Arial, Helvetica;
+  font-family: "Arial Narrow", Arial, Helvetica;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -410,16 +410,16 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Futura", "Arial Narrow", Arial, Helvetica;
+}
+
 h1 {
   font-size: 64px;
 }
 
 h2 {
   font-size: 48px;
-}
-
-p {
-  font-size: 18px;
 }
 
 p {
@@ -471,7 +471,8 @@ big {
 }
 
 .under-title {
-  font-size: 1.75em;
+  font-family: "Futura", "Arial Narrow", Arial, Helvetica;
+  font-size: 2em;
   font-style: italic;
   padding: 0;
   margin: 0;
@@ -584,12 +585,16 @@ input[type="submit"]:focus {
 }
 
 .btn-ktf2021-blue {
+  font-family: "Futura", "Arial Narrow", Arial, Helvetica;
   font-size: 1.5em;
+  border-radius: 0;
+  margin: 1.5vh 0;
+}
+
+.btn-ktf2021-blue {
   color: white;
   background-color: #00cfff;
   border-color: #00cfff;
-  border-radius: 0;
-  margin: 1.5vh 0;
 }
 
 .btn-ktf2021-blue:hover {
@@ -726,7 +731,7 @@ a:hover, a:active {
 }
 
 .menu {
-  font-size: 2em;
+  font-size: 1.5em;
   list-style: none;
   margin: 0;
   padding-left: 5vw;
@@ -1031,15 +1036,15 @@ a:hover, a:active {
 }
 
 .site-header .menu-header-logo img {
-  height: 30vh;
+  height: 25vh;
 }
 
 @media (min-width: 992px) {
   .site-header .menu-header-logo {
-    left: 42.5%;
+    left: 45%;
   }
   .site-header .menu-header-logo img {
-    height: 40vh;
+    height: 35vh;
   }
 }
 
@@ -1076,16 +1081,20 @@ a:hover, a:active {
 }
 
 .footer-navigation .footer-navigation-content {
-  margin: 0 1vw;
   padding: 50px 0;
   -webkit-transform: skewY(1deg);
   transform: skewY(1deg);
 }
 
 .site-info {
-  background-color: rgba(19, 164, 197, 0.95);
+  background-color: black;
   z-index: 0;
   width: 100%;
+  margin: 0;
+}
+
+.site-info .site-info-background {
+  background-color: rgba(0, 207, 255, 0.95);
   padding: 40px 0 25px 0;
   margin: 0;
 }
@@ -1101,12 +1110,14 @@ a:hover, a:active {
 .ktf2021-container-green,
 .ktf2021-container-carousel,
 .ktf2021-ab-news-container {
-  padding: 5vh 0;
+  margin: 2vh 0;
+  padding: 4vh 0;
   -webkit-transform: skewY(-1deg);
   transform: skewY(-1deg);
 }
 
 .ktf2021-container-white {
+  background-color: white;
   color: black;
 }
 
@@ -1126,7 +1137,7 @@ a:hover, a:active {
 }
 
 .ktf2021-container-carousel {
-  padding: 3vh 0;
+  padding: 0;
   height: 300px;
   overflow: hidden;
   z-index: -1;

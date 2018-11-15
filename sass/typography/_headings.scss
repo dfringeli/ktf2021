@@ -2,14 +2,14 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
+h1, h2, h3, h4 {
+	font-family: $font__heading;
+}
+
 h1 {
 	font-size: 64px;
 }
 
 h2 {
 	font-size: 48px;
-}
-
-p {
-	font-size: 18px;
 }

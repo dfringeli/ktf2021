@@ -21,13 +21,17 @@ input[type="submit"] {
 	}
 }
 
-.btn-ktf2021-blue{
+.btn-ktf2021-blue {
+	font-family: $font__heading;
 	font-size: 1.5em;
+	border-radius: 0;
+	margin: 1.5vh 0;
+}
+
+.btn-ktf2021-blue {
 	color: $color__white;
 	background-color: $color__blue_light;
 	border-color: $color__blue_light;
-	border-radius: 0;
-	margin: 1.5vh 0;
 }
 
 .btn-ktf2021-blue:hover{
