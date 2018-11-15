@@ -103,13 +103,14 @@
 					no-scroll class on the body */
 				mainNavigation.setAttribute('aria-hidden', !overlayNavigationOpen);
 				body.classList.toggle('noscroll', overlayNavigationOpen);
+				body.style.marginRight = overlayNavigationOpen ? getScrollbarWidth() + "px" : 0;
 
 				/* On some mobile browser when the overlay was previously
 					opened and scrolled, if you open it again it doesn't 
 					reset its scrollTop property */
 				setTimeout(function() {
 					mainNavigation.scrollTop = 0;
-				}, 750)
+				}, 750);
 			}
 			
 			function toggleSearch(btn) {
@@ -119,14 +120,40 @@
 				/* Toggle the aria-hidden state on the overlay and the 
 					no-scroll class on the body */
 				mainSearch.setAttribute('aria-hidden', !overlaySearchOpen);
-				body.classList.toggle('noscroll', overlaySearchOpen);
+				body.classList.toggle('noscroll', overlaySearchOpen);				
+				body.style.marginRight = overlaySearchOpen ? getScrollbarWidth() + "px" : 0;
 
 				/* On some mobile browser when the overlay was previously
 					opened and scrolled, if you open it again it doesn't 
 					reset its scrollTop property */
 				setTimeout(function() {
 					mainSearch.scrollTop = 0;
-				}, 750)
+				}, 750);
+			}
+
+			function getScrollbarWidth() {
+				var outer = document.createElement("div");
+				outer.style.visibility = "hidden";
+				outer.style.width = "100px";
+				outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+				document.body.appendChild(outer);
+
+				var widthNoScroll = outer.offsetWidth;
+				// force scrollbars
+				outer.style.overflow = "scroll";
+
+				// add innerdiv
+				var inner = document.createElement("div");
+				inner.style.width = "100%";
+				outer.appendChild(inner);        
+
+				var widthWithScroll = inner.offsetWidth;
+
+				// remove divs
+				outer.parentNode.removeChild(outer);
+
+				return widthNoScroll - widthWithScroll;
 			}
 		</script>
 	</header><!-- #masthead -->
