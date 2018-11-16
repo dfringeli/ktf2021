@@ -15,7 +15,7 @@ $skew: 1deg;
 $skew_negative: -1 * $skew;
 
 .ktf2021-content {
-    margin: 1vh 1vw;
+    padding: 1vh 1vw;
     -webkit-transform: skewY($skew);
     -moz-transform: skewY($skew);
     -ms-transform: skewY($skew);
@@ -37,7 +37,7 @@ $skew_negative: -1 * $skew;
 
 @media (min-width: $size__md) {
     .ktf2021-content {
-        margin: 1vh 7.5vw;
+        padding: 1vh 7.5vw;
     }   
 
     .search-container {
@@ -46,7 +46,7 @@ $skew_negative: -1 * $skew;
 }
 @media (min-width: $size__lg) {
     .ktf2021-content {
-        margin: 1vh 15vw;
+        padding: 1vh 15vw;
     }
  }
 

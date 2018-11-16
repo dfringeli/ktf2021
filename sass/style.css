@@ -682,7 +682,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .main-search {
   color: white;
-  position: fixed;
+  position: absolute;
   overflow-y: scroll;
   top: 0;
   right: 0;
@@ -717,7 +717,7 @@ a:hover, a:active {
 
 .main-navigation {
   color: white;
-  position: fixed;
+  position: absolute;
   overflow-y: scroll;
   top: 0;
   right: 0;
@@ -734,7 +734,7 @@ a:hover, a:active {
   font-size: 1.5em;
   list-style: none;
   margin: 0;
-  padding-left: 5vw;
+  padding: 0;
 }
 
 .menu ul {
@@ -969,7 +969,7 @@ a:hover, a:active {
 }
 
 .ktf2021-content {
-  margin: 1vh 1vw;
+  padding: 1vh 1vw;
   -webkit-transform: skewY(1deg);
   transform: skewY(1deg);
 }
@@ -988,7 +988,7 @@ a:hover, a:active {
 
 @media (min-width: 992px) {
   .ktf2021-content {
-    margin: 1vh 7.5vw;
+    padding: 1vh 7.5vw;
   }
   .search-container {
     width: 50%;
@@ -997,7 +997,7 @@ a:hover, a:active {
 
 @media (min-width: 1200px) {
   .ktf2021-content {
-    margin: 1vh 15vw;
+    padding: 1vh 15vw;
   }
 }
 
