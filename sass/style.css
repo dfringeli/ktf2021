@@ -699,6 +699,11 @@ a:hover, a:active {
   overflow: hidden;
 }
 
+#navigation-icon, #search-icon {
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
 [aria-hidden="true"] {
   -webkit-transition: height 0.75s, z-index 0s 1s;
   transition: height 0.75s, z-index 0s 1s;
@@ -779,13 +784,6 @@ a:hover, a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
-}
-
-.closebtn {
-  font-size: 60px;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 37.5em) {

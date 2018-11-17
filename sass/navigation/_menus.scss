@@ -16,6 +16,10 @@
 
 $navigation_fade_animation: 0.75s;
 
+#navigation-icon, #search-icon {
+	transition: opacity 0.2s;
+}
+
 [aria-hidden="true"] {    
     transition: height $navigation_fade_animation, z-index 0s 1s;
     width: 100vw;
@@ -110,13 +114,6 @@ $navigation_fade_animation: 0.75s;
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-}
-
-.closebtn {
-	font-size: 60px;
-	color: $color__white;
-	text-decoration: none;
-	cursor: pointer;
 }
 
 @media screen and (min-width: 37.5em) {

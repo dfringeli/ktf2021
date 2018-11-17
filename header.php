@@ -72,10 +72,10 @@
 			</div>
 			<div class="menu-header-controls d-flex flex-row">
 				<div class="menu-header-control align-self-center">
-					<i class="fas fa-search fa-2x fa-fw open-search" onclick="toggleSearch()"></i>					
+					<i id="search-icon" class="fas fa-search fa-2x fa-fw" onclick="toggleSearch()"></i>					
 				</div>
 				<div class="menu-header-control align-self-center">
-					<button class="hamburger hamburger--spin" type="button">
+					<button id="navigation-icon" class="hamburger hamburger--spin" type="button">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
@@ -96,21 +96,24 @@
 
 			var body = document.body;
 			var headerMenu = document.getElementById('masthead');
+
+			var navigationIcon = document.getElementById('navigation-icon');
 			var mainNavigation = document.querySelector('.main-navigation');
+
+			var searchIcon = document.getElementById('search-icon');
 			var mainSearch = document.querySelector('.main-search');
 
 			var navigationOpen = false;
 			var searchOpen = false;
 
 			function toggleNavigation() {
-
-				if (searchOpen) {
-					toggleSearch();
-				}
-
+				
 				hamburger.classList.toggle("is-active");
+
 				/* Detect the button class name */
 				navigationOpen = !navigationOpen;
+				searchIcon.style.opacity = navigationOpen ? "0" : "1";
+				searchIcon.style.visibility = navigationOpen ? "hidden" : "visible";
 
 				/* Toggle the aria-hidden state on the overlay and the 
 					no-scroll class on the body */
@@ -131,12 +134,11 @@
 			
 			function toggleSearch() {
 
-				if (navigationOpen) {
-					toggleNavigation();
-				}
-
 				/* Detect the button class name */
 				searchOpen = !searchOpen;
+
+				navigationIcon.style.opacity = searchOpen ? "0" : "1";
+				navigationIcon.style.visibility = searchOpen ? "hidden" : "visible";
 
 				/* Toggle the aria-hidden state on the overlay and the 
 					no-scroll class on the body */
@@ -194,11 +196,15 @@
 		function scrollFunction() {
 			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 				header.style.height = "150px";
-				headerPalme.style.height = "120px";
+				if (headerPalme) {
+					headerPalme.style.height = "120px";
+				}
 				headerLogo.style.height = "100px";
 			} else {
 				header.style.height = "175px";
-				headerPalme.style.height = "220px";
+				if (headerPalme) {
+					headerPalme.style.height = "220px";
+				}
 				headerLogo.style.height = "200px";
 			}
 		}
