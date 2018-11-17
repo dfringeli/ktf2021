@@ -1,6 +1,6 @@
 .main-search {
 	color: $color__white;
-    position: absolute;
+    position: fixed;
 	overflow-y: scroll;
 	top: 0; right: 0; bottom: 0; left: 0;
     background-color: rgba(0,0,0, 0.9);
@@ -32,7 +32,7 @@ $navigation_fade_animation: 0.75s;
 
 .main-navigation {
 	color: $color__white;
-	position: absolute; 
+	position: fixed; 
 	overflow-y: scroll;
 	top: 0; right: 0; bottom: 0; left: 0;
 	background-color: rgba(0,0,0, 0.9);
@@ -45,8 +45,6 @@ $navigation_fade_animation: 0.75s;
 .menu {
 	font-size: 1.5em;
 	list-style: none;
-	margin: 0;
-	padding: 0;
 
 	ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);

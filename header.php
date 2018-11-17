@@ -21,28 +21,18 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="site-search" class="main-search"  aria-hidden="true">
-	<div class="container-fluid">
-		<div class="row my-3">
-			<div class="col">
-				<i class="far fa-times-circle fa-3x fa-fw float-right" onclick="toggleSearch(this)"></i>
-			</div>
-		</div>
+<div id="site-search" class="main-search" aria-hidden="true">
+	<div class="container-fluid" style="margin-top: 250px;">
 		<div class="row">
 			<div class="col">
 				<?php get_search_form(); ?>
 			</div>
 		</div>
 	</div>
-</div> <!-- #site-search -->
+</div>
 <div id="site-navigation" class="main-navigation" aria-hidden="true">
-	<div class="container-fluid">
-		<div class="row mt-3">
-			<div class="col">
-				<i class="far fa-times-circle fa-3x fa-fw float-right close-navigation" onclick="toggleNavigation(this)"></i>
-			</div>
-		</div>
-		<div class="row">
+	<div class="container-fluid" style="margin-top: 250px;">
+		<div class="row justify-content-center">
 			<div class="col-sm menu-list">
 				<?php
 				wp_nav_menu( array(
@@ -66,44 +56,70 @@
 			</div>
 		</div>
 	</div>
-</div><!-- #site-navigation -->
+</div>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<div class="menu-header d-flex flex-row pb-2 pb-3">
+		<div class="menu-header d-flex justify-content-between">
 			<?php
 				if ( is_front_page() ) {	
-					echo '<div class="menu-header-palme d-none d-lg-block"><img class="img-fluid" src="' . get_template_directory_uri() . '/images/palme.svg" width="290px" /></div>';
+					echo '<div class="menu-header-palme d-none d-lg-block"><img id="header-palme" src="' . get_template_directory_uri() . '/images/palme.svg" /></div>';
 				}
 			?>
-			<div class="menu-header-logo m-auto">
+			<div class="menu-header-logo">
 				<a href="<?php home_url(); ?>" >
-					<img src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
+					<img id="header-logo" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
 				</a>
 			</div>
-			<div class="menu-header-controls pr-3 d-flex flex-row">
-				<div class="menu-header-control p-2 align-self-center">
-					<i class="fas fa-search fa-2x fa-fw open-search" onclick="toggleSearch(this)"></i>					
+			<div class="menu-header-controls d-flex flex-row">
+				<div class="menu-header-control align-self-center">
+					<i class="fas fa-search fa-2x fa-fw open-search" onclick="toggleSearch()"></i>					
 				</div>
-				<div class="menu-header-control p-2 align-self-center">
-					<i class="fas fa-bars fa-2x fa-fw open-navigation" onclick="toggleNavigation(this)"></i>
+				<div class="menu-header-control align-self-center">
+					<button class="hamburger hamburger--spin" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+					<script>
+						// Look for .hamburger
+						var hamburger = document.querySelector(".hamburger");
+						// On click
+						hamburger.addEventListener("click", function() {
+							// Do something else, like open/close menu
+							toggleNavigation();
+						});
+					</script>
 				</div>
 			</div>
 		</div>
 		<script>
 
 			var body = document.body;
+			var headerMenu = document.getElementById('masthead');
 			var mainNavigation = document.querySelector('.main-navigation');
 			var mainSearch = document.querySelector('.main-search');
 
-			function toggleNavigation(btn) {
+			var navigationOpen = false;
+			var searchOpen = false;
+
+			function toggleNavigation() {
+
+				if (searchOpen) {
+					toggleSearch();
+				}
+
+				hamburger.classList.toggle("is-active");
 				/* Detect the button class name */
-				var overlayNavigationOpen = btn.classList.contains('open-navigation');
+				navigationOpen = !navigationOpen;
 
 				/* Toggle the aria-hidden state on the overlay and the 
 					no-scroll class on the body */
-				mainNavigation.setAttribute('aria-hidden', !overlayNavigationOpen);
-				body.classList.toggle('noscroll', overlayNavigationOpen);
-				body.style.marginRight = overlayNavigationOpen ? getScrollbarWidth() + "px" : 0;
+				mainNavigation.setAttribute('aria-hidden', !navigationOpen);
+				body.classList.toggle('noscroll', navigationOpen);
+				var scrollbarPixel = getScrollbarWidth();
+				body.style.marginRight = navigationOpen ? scrollbarPixel + "px" : 0;
+				var scrollbarInPercentage = 100 / $(window).width() * scrollbarPixel;
+				headerMenu.style.width = navigationOpen ? 100 - scrollbarInPercentage + "%" : "100%";
 
 				/* On some mobile browser when the overlay was previously
 					opened and scrolled, if you open it again it doesn't 
@@ -113,15 +129,23 @@
 				}, 750);
 			}
 			
-			function toggleSearch(btn) {
+			function toggleSearch() {
+
+				if (navigationOpen) {
+					toggleNavigation();
+				}
+
 				/* Detect the button class name */
-				var overlaySearchOpen = btn.classList.contains('open-search');
+				searchOpen = !searchOpen;
 
 				/* Toggle the aria-hidden state on the overlay and the 
 					no-scroll class on the body */
-				mainSearch.setAttribute('aria-hidden', !overlaySearchOpen);
-				body.classList.toggle('noscroll', overlaySearchOpen);				
-				body.style.marginRight = overlaySearchOpen ? getScrollbarWidth() + "px" : 0;
+				mainSearch.setAttribute('aria-hidden', !searchOpen);
+				body.classList.toggle('noscroll', searchOpen);
+				var scrollbarPixel = getScrollbarWidth();			
+				body.style.marginRight = searchOpen ? scrollbarPixel + "px" : 0;
+				var scrollbarInPercentage = 100 / $(window).width() * scrollbarPixel;
+				headerMenu.style.width = searchOpen ? 100 - scrollbarInPercentage + "%" : "100%";
 
 				/* On some mobile browser when the overlay was previously
 					opened and scrolled, if you open it again it doesn't 
@@ -157,5 +181,27 @@
 			}
 		</script>
 	</header><!-- #masthead -->
+
+	<script>
+		window.onscroll = function() {scrollFunction()};
+
+		var header = document.getElementById("masthead");
+		var headerPalme = document.getElementById("header-palme");
+		var headerLogo = document.getElementById('header-logo');
+
+		scrollFunction();
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+				header.style.height = "150px";
+				headerPalme.style.height = "120px";
+				headerLogo.style.height = "100px";
+			} else {
+				header.style.height = "175px";
+				headerPalme.style.height = "220px";
+				headerLogo.style.height = "200px";
+			}
+		}
+	</script>
 
 	<div id="content" class="site-content">

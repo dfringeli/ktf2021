@@ -126,6 +126,8 @@ function ktf2021_scripts() {
 
 	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 
+	wp_enqueue_style('hamburgers', get_template_directory_uri() . '/sass/hamburgers.css');
+
 	wp_enqueue_script( 'ktf2021-navigation', get_template_directory_uri() . '/js/navigation.js');
 
 	wp_enqueue_script( 'ktf2021-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

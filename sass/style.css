@@ -682,7 +682,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .main-search {
   color: white;
-  position: absolute;
+  position: fixed;
   overflow-y: scroll;
   top: 0;
   right: 0;
@@ -717,7 +717,7 @@ a:hover, a:active {
 
 .main-navigation {
   color: white;
-  position: absolute;
+  position: fixed;
   overflow-y: scroll;
   top: 0;
   right: 0;
@@ -733,8 +733,6 @@ a:hover, a:active {
 .menu {
   font-size: 1.5em;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .menu ul {
@@ -1007,9 +1005,14 @@ a:hover, a:active {
 .site-header {
   color: white;
   background-color: black;
-  height: 30vh;
+  -webkit-transition: height 0.1s;
+  transition: height 0.1s;
   margin-top: -50px;
   padding-top: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
   -webkit-transform: skewY(-1deg);
   transform: skewY(-1deg);
 }
@@ -1022,35 +1025,27 @@ a:hover, a:active {
 }
 
 .site-header .menu-header-palme {
-  top: 0px;
-  left: 0px;
-  z-index: 999;
-  width: 30%;
-  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.site-header .menu-header-palme img {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .site-header .menu-header-logo {
-  position: absolute;
-  top: 5vh;
-  left: 5vw;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .site-header .menu-header-logo img {
-  height: 25vh;
-}
-
-@media (min-width: 992px) {
-  .site-header .menu-header-logo {
-    left: 45%;
-  }
-  .site-header .menu-header-logo img {
-    height: 35vh;
-  }
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .site-header .menu-header-controls {
-  margin-left: auto;
-  margin-right: 0;
+  margin-right: 10px;
 }
 
 .site-header .menu-header-controls i {
@@ -1070,6 +1065,16 @@ a:hover, a:active {
   color: gray;
 }
 
+/*--------------------------------------------------------------
+## Site Content
+--------------------------------------------------------------*/
+.site-content {
+  margin-top: 120px;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
 .footer-navigation {
   background-color: #00cfff;
   -webkit-transform: skewY(-1deg);
