@@ -720,6 +720,16 @@ a:hover, a:active {
   height: 100%;
 }
 
+.header-overlay {
+  margin-top: 150px;
+}
+
+@media (min-width: 1200px) {
+  .header-overlay {
+    margin-top: 250px;
+  }
+}
+
 .main-navigation {
   color: white;
   position: fixed;
@@ -980,6 +990,27 @@ a:hover, a:active {
   background-color: #a3d01e;
   border-color: #a3d01e;
   z-index: 0 !important;
+}
+
+@media (min-width: 1200px) {
+  .headerAtTop {
+    height: 175px;
+  }
+  .headerScrolled {
+    height: 150px;
+  }
+  .headerPalmeAtTop {
+    height: 220px;
+  }
+  .headerPalmeScrolled {
+    height: 120px;
+  }
+  .headerLogoAtTop {
+    height: 200px;
+  }
+  .headerLogoScrolled {
+    height: 100px;
+  }
 }
 
 @media (min-width: 992px) {

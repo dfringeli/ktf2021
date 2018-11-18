@@ -34,6 +34,16 @@ $navigation_fade_animation: 0.75s;
     height: 100%; 
 }
 
+.header-overlay {
+	margin-top: 150px;
+}
+
+@media (min-width: $size__lg) {
+	.header-overlay {
+		margin-top: 250px;
+	}
+}
+
 .main-navigation {
 	color: $color__white;
 	position: fixed; 

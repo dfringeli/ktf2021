@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="site-search" class="main-search" aria-hidden="true">
-	<div class="container-fluid" style="margin-top: 250px;">
+	<div class="container-fluid header-overlay">
 		<div class="row">
 			<div class="col">
 				<?php get_search_form(); ?>
@@ -31,7 +31,7 @@
 	</div>
 </div>
 <div id="site-navigation" class="main-navigation" aria-hidden="true">
-	<div class="container-fluid" style="margin-top: 250px;">
+	<div class="container-fluid header-overlay">
 		<div class="row justify-content-center">
 			<div class="col-sm menu-list">
 				<?php
