@@ -992,27 +992,6 @@ a:hover, a:active {
   z-index: 0 !important;
 }
 
-@media (min-width: 1200px) {
-  .headerAtTop {
-    height: 175px;
-  }
-  .headerScrolled {
-    height: 150px;
-  }
-  .headerPalmeAtTop {
-    height: 220px;
-  }
-  .headerPalmeScrolled {
-    height: 120px;
-  }
-  .headerLogoAtTop {
-    height: 200px;
-  }
-  .headerLogoScrolled {
-    height: 100px;
-  }
-}
-
 @media (min-width: 992px) {
   .ktf2021-content {
     padding: 1vh 7.5vw;
@@ -1061,6 +1040,7 @@ a:hover, a:active {
 .site-header .menu-header-palme img {
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  height: 220px;
 }
 
 .site-header .menu-header-logo {
@@ -1071,6 +1051,7 @@ a:hover, a:active {
 .site-header .menu-header-logo img {
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  height: 200px;
 }
 
 .site-header .menu-header-controls {

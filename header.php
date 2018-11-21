@@ -191,7 +191,9 @@
 		var headerPalme = document.getElementById("header-palme");
 		var headerLogo = document.getElementById('header-logo');
 
-		scrollFunction();
+		$(document).ready(function() {
+			scrollFunction();
+		});
 
 		function scrollFunction() {
 			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
