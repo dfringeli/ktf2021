@@ -16,23 +16,27 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer-navigation sticky-bottom">
 			<div class="footer-navigation-content ktf2021-reveal">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm menu-list">
+				<div class="d-flex">
+					<div class="flex-fill menu-list">
+						<div class="d-flex justify-content-center">
 							<?php
 							wp_nav_menu( array(
 								'menu' => 'menu-left'
 							) );
 							?>
 						</div>
-						<div class="col-sm menu-list">
+					</div>
+					<div class="flex-fill menu-list">
+						<div class="d-flex justify-content-center">
 							<?php
 							wp_nav_menu( array(
 								'menu' => 'menu-middle'
 							) );
 							?>
 						</div>
-						<div class="col-sm menu-list">
+					</div>
+					<div class="flex-fill menu-list">
+						<div class="d-flex justify-content-center">
 							<?php
 							wp_nav_menu( array(
 								'menu' => 'menu-right'

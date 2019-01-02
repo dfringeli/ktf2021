@@ -724,7 +724,7 @@ a:hover, a:active {
   margin-top: 150px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .header-overlay {
     margin-top: 250px;
   }
@@ -1067,6 +1067,11 @@ a:hover, a:active {
     -webkit-transform: skewY(1deg);
     transform: skewY(1deg);
   }
+}
+
+.menu-list ul {
+  margin: 0;
+  padding: 0;
 }
 
 .menu-list a {

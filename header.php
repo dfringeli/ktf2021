@@ -22,37 +22,43 @@
 
 <body <?php body_class(); ?>>
 <div id="site-search" class="main-search" aria-hidden="true">
-	<div class="container-fluid header-overlay">
-		<div class="row">
-			<div class="col">
+	<div class="header-overlay">
+		<div class="d-flex justify-content-center">
+			<div class="search-container">
 				<?php get_search_form(); ?>
 			</div>
 		</div>
 	</div>
 </div>
 <div id="site-navigation" class="main-navigation" aria-hidden="true">
-	<div class="container-fluid header-overlay">
-		<div class="row justify-content-center">
-			<div class="col-sm menu-list">
-				<?php
-				wp_nav_menu( array(
-					'menu' => 'menu-left'
-				) );
-				?>
+	<div class="header-overlay">
+		<div class="d-flex">
+			<div class="flex-fill menu-list">
+				<div class="d-flex justify-content-center">
+					<?php
+					wp_nav_menu( array(
+						'menu' => 'menu-left'
+					) );
+					?>
+				</div>
 			</div>
-			<div class="col-sm menu-list">
-				<?php
-				wp_nav_menu( array(
-					'menu' => 'menu-middle'
-				) );
-				?>
+			<div class="flex-fill menu-list">
+				<div class="d-flex justify-content-center">
+					<?php
+					wp_nav_menu( array(
+						'menu' => 'menu-middle'
+					) );
+					?>
+				</div>
 			</div>
-			<div class="col-sm menu-list">
-				<?php
-				wp_nav_menu( array(
-					'menu' => 'menu-right'
-				) );
-				?>
+			<div class="flex-fill menu-list">
+				<div class="d-flex justify-content-center">
+					<?php
+					wp_nav_menu( array(
+						'menu' => 'menu-right'
+					) );
+					?>
+				</div>
 			</div>
 		</div>
 	</div>

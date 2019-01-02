@@ -124,6 +124,11 @@ $skew_negative: -1 * $skew;
 // PC, same as Tablet
 
 .menu-list {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
     a {
         color:white;
         transition:.5s;
