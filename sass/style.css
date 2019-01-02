@@ -974,12 +974,6 @@ a:hover, a:active {
   display: block;
 }
 
-.ktf2021-content {
-  padding: 1vh 1vw;
-  -webkit-transform: skewY(1deg);
-  transform: skewY(1deg);
-}
-
 .search-container {
   width: 90%;
   margin-bottom: 10vh;
@@ -992,9 +986,15 @@ a:hover, a:active {
   z-index: 0 !important;
 }
 
+.ktf2021-content {
+  padding: 1vh 2vw;
+}
+
 @media (min-width: 992px) {
   .ktf2021-content {
     padding: 1vh 7.5vw;
+    -webkit-transform: skewY(1deg);
+    transform: skewY(1deg);
   }
   .search-container {
     width: 50%;
@@ -1021,15 +1021,11 @@ a:hover, a:active {
   width: 100%;
   top: 0;
   z-index: 1;
-  -webkit-transform: skewY(-1deg);
-  transform: skewY(-1deg);
 }
 
 .site-header .menu-header {
   position: relative;
   height: 100%;
-  -webkit-transform: skewY(1deg);
-  transform: skewY(1deg);
 }
 
 .site-header .menu-header-palme {
@@ -1062,6 +1058,17 @@ a:hover, a:active {
   cursor: pointer;
 }
 
+@media (min-width: 992px) {
+  .site-header {
+    -webkit-transform: skewY(-1deg);
+    transform: skewY(-1deg);
+  }
+  .site-header .menu-header {
+    -webkit-transform: skewY(1deg);
+    transform: skewY(1deg);
+  }
+}
+
 .menu-list a {
   color: white;
   transition: .5s;
@@ -1087,8 +1094,6 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .footer-navigation {
   background-color: #00cfff;
-  -webkit-transform: skewY(-1deg);
-  transform: skewY(-1deg);
   margin: 0 0 -20px 0;
   z-index: 10;
   width: 100%;
@@ -1097,8 +1102,17 @@ a:hover, a:active {
 
 .footer-navigation .footer-navigation-content {
   padding: 50px 0;
-  -webkit-transform: skewY(1deg);
-  transform: skewY(1deg);
+}
+
+@media (min-width: 992px) {
+  .footer-navigation {
+    -webkit-transform: skewY(-1deg);
+    transform: skewY(-1deg);
+  }
+  .footer-navigation .footer-navigation-content {
+    -webkit-transform: skewY(1deg);
+    transform: skewY(1deg);
+  }
 }
 
 .site-info {
@@ -1127,8 +1141,18 @@ a:hover, a:active {
 .ktf2021-ab-news-container {
   margin: 2vh 0;
   padding: 4vh 0;
-  -webkit-transform: skewY(-1deg);
-  transform: skewY(-1deg);
+}
+
+@media (min-width: 992px) {
+  .ktf2021-container-white,
+  .ktf2021-container-black,
+  .ktf2021-container-blue,
+  .ktf2021-container-green,
+  .ktf2021-container-carousel,
+  .ktf2021-ab-news-container {
+    -webkit-transform: skewY(-1deg);
+    transform: skewY(-1deg);
+  }
 }
 
 .ktf2021-container-white {
