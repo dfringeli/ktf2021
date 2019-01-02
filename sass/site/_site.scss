@@ -27,12 +27,14 @@ $skew: 1deg;
 $skew_negative: -1 * $skew;
 
 /// Mobile
+.footer-navigation-content,
 .ktf2021-content {
     padding: 1vh 2vw;
 }
 
 /// Tablet
 @media (min-width: $size__md) {
+    .footer-navigation-content,
     .ktf2021-content {
         padding: 1vh 7.5vw;
         -webkit-transform: skewY($skew);
@@ -49,6 +51,7 @@ $skew_negative: -1 * $skew;
 
 /// PC (skewY same as Tablet)
 @media (min-width: $size__lg) {
+    .footer-navigation-content,
     .ktf2021-content {
         padding: 1vh 15vw;
     }
@@ -156,29 +159,10 @@ $skew_negative: -1 * $skew;
     margin: 0 0 -20px 0;
     z-index: 10;
     width: 100%;
-    padding: 0;
 
     .footer-navigation-content {
-        padding: 50px 0;
-    }
-}
-
-/// Tablet
-@media (min-width: $size__md) {
-    .footer-navigation {
-        -webkit-transform: skewY($skew_negative);
-        -moz-transform: skewY($skew_negative);
-        -ms-transform: skewY($skew_negative);
-        -o-transform: skewY($skew_negative);
-        transform: skewY($skew_negative);
-
-        .footer-navigation-content {
-            -webkit-transform: skewY($skew);
-            -moz-transform: skewY($skew);
-            -ms-transform: skewY($skew);
-            -o-transform: skewY($skew);
-            transform: skewY($skew);
-        }
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -226,7 +210,8 @@ $skew_negative: -1 * $skew;
     .ktf2021-container-blue,
     .ktf2021-container-green,
     .ktf2021-container-carousel,
-    .ktf2021-ab-news-container {
+    .ktf2021-ab-news-container,
+    .footer-navigation {
         -webkit-transform: skewY($skew_negative);
         -moz-transform: skewY($skew_negative);
         -ms-transform: skewY($skew_negative);

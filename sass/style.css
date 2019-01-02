@@ -986,11 +986,13 @@ a:hover, a:active {
   z-index: 0 !important;
 }
 
+.footer-navigation-content,
 .ktf2021-content {
   padding: 1vh 2vw;
 }
 
 @media (min-width: 992px) {
+  .footer-navigation-content,
   .ktf2021-content {
     padding: 1vh 7.5vw;
     -webkit-transform: skewY(1deg);
@@ -1002,6 +1004,7 @@ a:hover, a:active {
 }
 
 @media (min-width: 1200px) {
+  .footer-navigation-content,
   .ktf2021-content {
     padding: 1vh 15vw;
   }
@@ -1102,22 +1105,11 @@ a:hover, a:active {
   margin: 0 0 -20px 0;
   z-index: 10;
   width: 100%;
-  padding: 0;
 }
 
 .footer-navigation .footer-navigation-content {
-  padding: 50px 0;
-}
-
-@media (min-width: 992px) {
-  .footer-navigation {
-    -webkit-transform: skewY(-1deg);
-    transform: skewY(-1deg);
-  }
-  .footer-navigation .footer-navigation-content {
-    -webkit-transform: skewY(1deg);
-    transform: skewY(1deg);
-  }
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .site-info {
@@ -1160,7 +1152,8 @@ a:hover, a:active {
   .ktf2021-container-blue,
   .ktf2021-container-green,
   .ktf2021-container-carousel,
-  .ktf2021-ab-news-container {
+  .ktf2021-ab-news-container,
+  .footer-navigation {
     -webkit-transform: skewY(-1deg);
     transform: skewY(-1deg);
   }

@@ -32,9 +32,9 @@
 </div>
 <div id="site-navigation" class="main-navigation" aria-hidden="true">
 	<div class="header-overlay">
-		<div class="d-sm-flex">
+		<div class="ktf2021-content d-md-flex">
 			<div class="flex-fill menu-list">
-				<div class="d-flex justify-content-center">
+				<div class="d-flex justify-content-md-start justify-content-center">
 					<?php
 					wp_nav_menu( array(
 						'menu' => 'menu-left'
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<div class="flex-fill menu-list">
-				<div class="d-flex justify-content-center">
+				<div class="d-flex justify-content-md-end justify-content-center">
 					<?php
 					wp_nav_menu( array(
 						'menu' => 'menu-right'
