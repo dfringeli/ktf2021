@@ -192,8 +192,14 @@ $skew_negative: -1 * $skew;
 
     .site-info-background {
         background-color: $color__background-footer-end;
-        padding: 40px 0 25px 0;
+        padding: 0;
         margin: 0;
+    }
+
+    @media (min-width: $size__md) {
+        .site-info-background {
+            padding: 40px 0 25px 0;
+        }
     }
 
     .site-info-content {

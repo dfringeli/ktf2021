@@ -49,14 +49,10 @@
 		</div>
 		<div class="site-info sticky-bottom">
 			<div class="site-info-background">
-				<div class="site-info-content container-fluid">
-					<div class="row">
-						<div class="col">
-							<span class="ktf2021-content ktf2021-reveal">
-								© Copyright KTF2021, <?php echo date("Y"); ?>
-							</span>
-						</div>
-					</div>
+				<div class="d-flex justify-content-end site-info-content">
+					<span class="ktf2021-content ktf2021-reveal">
+						© Copyright KTF2021, <?php echo date("Y"); ?>
+					</span>
 				</div><!-- .site-info-content -->			
 			</div>
 		</div><!-- .site-info -->
