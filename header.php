@@ -203,7 +203,7 @@
 
 		function scrollFunction() {
 			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-				header.style.height = "150px";
+				header.style.height = "130px";
 				if (headerPalme) {
 					headerPalme.style.height = "120px";
 				}
