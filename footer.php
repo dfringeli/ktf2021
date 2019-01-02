@@ -50,7 +50,7 @@
 		<div class="site-info sticky-bottom">
 			<div class="site-info-background">
 				<div class="d-flex justify-content-end site-info-content">
-					<span class="ktf2021-content ktf2021-reveal">
+					<span class="ktf2021-content">
 						© Copyright KTF2021, <?php echo date("Y"); ?>
 					</span>
 				</div><!-- .site-info-content -->			
