@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer-navigation sticky-bottom">
 			<div class="footer-navigation-content ktf2021-reveal">
-				<div class="d-flex">
+				<div class="d-sm-flex">
 					<div class="flex-fill menu-list">
 						<div class="d-flex justify-content-center">
 							<?php

@@ -32,7 +32,7 @@
 </div>
 <div id="site-navigation" class="main-navigation" aria-hidden="true">
 	<div class="header-overlay">
-		<div class="d-flex">
+		<div class="d-sm-flex">
 			<div class="flex-fill menu-list">
 				<div class="d-flex justify-content-center">
 					<?php
