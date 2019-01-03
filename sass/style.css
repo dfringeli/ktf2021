@@ -1034,6 +1034,21 @@ a:hover, a:active {
   height: 100px;
 }
 
+.site-header.desktop {
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+.site-header.desktop img {
+  height: 125px;
+}
+
+.site-header.desktop .header-palme {
+  top: 0;
+  left: 0;
+  height: 200px;
+}
+
 .search-icon {
   padding: 15px 15px;
   display: inline-block;
@@ -1140,7 +1155,8 @@ a:hover, a:active {
   .ktf2021-container-green,
   .ktf2021-container-carousel,
   .ktf2021-ab-news-container,
-  .footer-navigation {
+  .footer-navigation,
+  .site-header.desktop {
     -webkit-transform: skewY(-1deg);
     transform: skewY(-1deg);
   }

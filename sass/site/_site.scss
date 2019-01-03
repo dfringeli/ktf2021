@@ -74,6 +74,20 @@ $skew_negative: -1 * $skew;
     }
 }
 
+.site-header.desktop {
+    margin-top: -50px;
+    padding-top: 50px;
+
+    img {
+        height: 125px;
+    }
+
+    .header-palme {
+        top: 0; left: 0;
+        height: 200px;
+    }
+}
+
 .search-icon {
     padding: 15px 15px;
     display: inline-block;
@@ -93,71 +107,6 @@ $skew_negative: -1 * $skew;
 .search-icon:hover {
     color: $color__gray;
 }
-
-// .site-header {
-// 	color: $color__white;
-//     background-color: $color__background-site-header;
-//     transition: height 0.1s;
-//     margin-top: -50px;
-//     padding-top: 50px;
-//     position: fixed;
-//     width: 100%;
-//     top: 0;
-//     z-index: 1;
-
-// 	.menu-header {
-//         position: relative;
-//         height: 100%;
-// 	}
-	
-// 	.menu-header-palme {
-// 		top: 0; left: 0;
-        
-//         img {
-//             transition: 0.1s;
-//             height: 220px;
-//         }
-//     }
-    
-//     .menu-header-logo {
-//         margin-top: 10px;
-//         margin-left: 10px;
-
-//         img {
-//             transition: 0.1s;
-//             height: 200px;
-//         }
-//     }
-
-//     .menu-header-controls {
-//         margin-right: 10px;
-
-//         i {
-//             cursor: pointer;
-//         }
-//     }
-// }
-
-// /// Tablet
-// @media (min-width: $size__md) {
-//     .site-header {
-//         -webkit-transform: skewY($skew_negative);
-//         -moz-transform: skewY($skew_negative);
-//         -ms-transform: skewY($skew_negative);
-//         -o-transform: skewY($skew_negative);
-//         transform: skewY($skew_negative);
-    
-//         .menu-header {
-//             -webkit-transform: skewY($skew);
-//             -moz-transform: skewY($skew);
-//             -ms-transform: skewY($skew);
-//             -o-transform: skewY($skew);
-//             transform: skewY($skew);
-//         }
-//     }
-// }
-
-// PC, same as Tablet
 
 .menu-list {
     ul {
@@ -244,7 +193,8 @@ $skew_negative: -1 * $skew;
     .ktf2021-container-green,
     .ktf2021-container-carousel,
     .ktf2021-ab-news-container,
-    .footer-navigation {
+    .footer-navigation,
+    .site-header.desktop {
         -webkit-transform: skewY($skew_negative);
         -moz-transform: skewY($skew_negative);
         -ms-transform: skewY($skew_negative);
