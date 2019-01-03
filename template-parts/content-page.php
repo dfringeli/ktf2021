@@ -13,7 +13,6 @@
 	<?php ktf2021_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<h1>content-page.php</h1>
 		<?php
 		the_content();
 
