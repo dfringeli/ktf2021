@@ -15,30 +15,41 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Suech Ergäbnis für: "%s"', 'ktf2021' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
+			<header class="ktf2021-container-white">
+				<div class="ktf2021-content">
+					<h1 class="page-title text-center">
+						<?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Suech Ergäbnis für: "%s"', 'ktf2021' ), '<span>' . get_search_query() . '</span>' );
+						?>
+					</h1>
+				</div>
 			</header><!-- .page-header -->
 
+			<div class="ktf2021-container-black">
+				<div class="ktf2021-content">
+					<div class="d-flex justify-content-center flex-wrap">
+
+						<?php
+						/* Start the Loop */
+						while ( have_posts() ) :
+							the_post();
+
+							/**
+							 * Run the loop for the search to output the results.
+							 * If you want to overload this in a child theme then include a file
+							 * called content-search.php and that will be used instead.
+							 */
+							get_template_part( 'template-parts/content', 'search' );
+
+						endwhile;
+						?>
+					</div>
+				</div>
+			</div>
+
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
+			// the_posts_navigation();
 
 		else :
 
