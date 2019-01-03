@@ -1024,62 +1024,39 @@ a:hover, a:active {
 ## Site Sections
 --------------------------------------------------------------*/
 .site-header {
-  color: white;
   background-color: black;
   -webkit-transition: height 0.1s;
   transition: height 0.1s;
-  margin-top: -50px;
-  padding-top: 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
   z-index: 1;
 }
 
-.site-header .menu-header {
-  position: relative;
-  height: 100%;
+.site-header.mobile img {
+  height: 100px;
 }
 
-.site-header .menu-header-palme {
-  top: 0;
-  left: 0;
-}
-
-.site-header .menu-header-palme img {
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  height: 220px;
-}
-
-.site-header .menu-header-logo {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.site-header .menu-header-logo img {
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  height: 200px;
-}
-
-.site-header .menu-header-controls {
-  margin-right: 10px;
-}
-
-.site-header .menu-header-controls i {
+.search-icon {
+  padding: 15px 15px;
+  display: inline-block;
   cursor: pointer;
+  -webkit-transition-property: color, -webkit-filter;
+  transition-property: color, -webkit-filter;
+  transition-property: color, filter;
+  transition-property: color, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: white;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
 }
 
-@media (min-width: 992px) {
-  .site-header {
-    -webkit-transform: skewY(-1deg);
-    transform: skewY(-1deg);
-  }
-  .site-header .menu-header {
-    -webkit-transform: skewY(1deg);
-    transform: skewY(1deg);
-  }
+.search-icon:hover {
+  color: #969696;
 }
 
 .menu-list ul {

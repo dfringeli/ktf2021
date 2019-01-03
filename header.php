@@ -64,7 +64,7 @@
 	</div>
 </div>
 <div id="page" class="site">
-	<header id="masthead" class="site-header">
+	<!-- <header id="masthead" class="site-header">
 		<div class="menu-header d-flex justify-content-between">
 			<?php
 				if ( is_front_page() ) {	
@@ -188,9 +188,122 @@
 				return widthNoScroll - widthWithScroll;
 			}
 		</script>
-	</header><!-- #masthead -->
+	</header>#masthead -->
+
+	<header class="site-header mobile d-lg-none fixed-top">
+		<div class="ktf2021-content d-flex justify-content-between">
+			<a href="<?php echo get_site_url(); ?>" >
+				<img class="position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
+			</a>
+			<div class="d-flex">
+				<button class="search-icon" onclick="toggleSearch()" type="button">
+					<i class="fas fa-search fa-2x fa-fw"></i>
+				</button>
+				<button class="hamburger hamburger--spin navigation-icon" onclick="toggleNavigation()" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<header class="site-header desktop d-none d-lg-block fixed-top">
+		<span>Desktop</span>
+	</header>
 
 	<script>
+
+			var body = document.body;
+			var headerMenu = document.querySelector('.site-header');
+
+			var navigationIcon = document.querySelector('.navigation-icon');
+			var mainNavigation = document.querySelector('.main-navigation');
+
+			var searchIcon = document.querySelector('.search-icon');
+			var mainSearch = document.querySelector('.main-search');
+
+			var navigationOpen = false;
+			var searchOpen = false;
+
+			function toggleNavigation() {
+				
+				navigationIcon.classList.toggle("is-active");
+
+				/* Detect the button class name */
+				navigationOpen = !navigationOpen;
+				searchIcon.style.opacity = navigationOpen ? "0" : "1";
+				searchIcon.style.visibility = navigationOpen ? "hidden" : "visible";
+
+				/* Toggle the aria-hidden state on the overlay and the 
+					no-scroll class on the body */
+				mainNavigation.setAttribute('aria-hidden', !navigationOpen);
+				body.classList.toggle('noscroll', navigationOpen);
+				var scrollbarPixel = getScrollbarWidth();
+				body.style.marginRight = navigationOpen ? scrollbarPixel + "px" : 0;
+				var scrollbarInPercentage = 100 / $(window).width() * scrollbarPixel;
+				headerMenu.style.width = navigationOpen ? 100 - scrollbarInPercentage + "%" : "100%";
+
+				/* On some mobile browser when the overlay was previously
+					opened and scrolled, if you open it again it doesn't 
+					reset its scrollTop property */
+				setTimeout(function() {
+					mainNavigation.scrollTop = 0;
+				}, 750);
+			}
+			
+			function toggleSearch() {
+
+				/* Detect the button class name */
+				searchOpen = !searchOpen;
+
+				navigationIcon.style.opacity = searchOpen ? "0" : "1";
+				navigationIcon.style.visibility = searchOpen ? "hidden" : "visible";
+
+				/* Toggle the aria-hidden state on the overlay and the 
+					no-scroll class on the body */
+				mainSearch.setAttribute('aria-hidden', !searchOpen);
+				body.classList.toggle('noscroll', searchOpen);
+				var scrollbarPixel = getScrollbarWidth();			
+				body.style.marginRight = searchOpen ? scrollbarPixel + "px" : 0;
+				var scrollbarInPercentage = 100 / $(window).width() * scrollbarPixel;
+				headerMenu.style.width = searchOpen ? 100 - scrollbarInPercentage + "%" : "100%";
+
+				/* On some mobile browser when the overlay was previously
+					opened and scrolled, if you open it again it doesn't 
+					reset its scrollTop property */
+				setTimeout(function() {
+					mainSearch.scrollTop = 0;
+				}, 750);
+			}
+
+			function getScrollbarWidth() {
+				var outer = document.createElement("div");
+				outer.style.visibility = "hidden";
+				outer.style.width = "100px";
+				outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+				document.body.appendChild(outer);
+
+				var widthNoScroll = outer.offsetWidth;
+				// force scrollbars
+				outer.style.overflow = "scroll";
+
+				// add innerdiv
+				var inner = document.createElement("div");
+				inner.style.width = "100%";
+				outer.appendChild(inner);        
+
+				var widthWithScroll = inner.offsetWidth;
+
+				// remove divs
+				outer.parentNode.removeChild(outer);
+
+				return widthNoScroll - widthWithScroll;
+			}
+		</script>
+
+	<!-- <script>
 		window.onscroll = function() {scrollFunction()};
 
 		var header = document.getElementById("masthead");
@@ -216,6 +329,6 @@
 				headerLogo.style.height = "200px";
 			}
 		}
-	</script>
+	</script> -->
 
 	<div id="content" class="site-content">
