@@ -124,7 +124,7 @@ function ktf2021_scripts() {
 
 	wp_enqueue_style( 'ktf2021-style', get_template_directory_uri() . '/sass/style.css' );
 
-	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
 	wp_enqueue_style('hamburgers', get_template_directory_uri() . '/sass/hamburgers.css');
 

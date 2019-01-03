@@ -26,11 +26,11 @@ if ( ! function_exists( 'ktf2021_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'ktf2021' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			esc_html_x( '%s', 'post date', 'ktf2021' ),
+			$time_string
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on"><i class="fas fa-calendar"></i>' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -42,11 +42,11 @@ if ( ! function_exists( 'ktf2021_posted_by' ) ) :
 	function ktf2021_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'ktf2021' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			esc_html_x( '%s', 'post author', 'ktf2021' ),
+			'<span class="author vcard">' . esc_html( get_the_author() ) . '</span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="byline"><i class="fas fa-user"></i>' . $byline . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -58,12 +58,6 @@ if ( ! function_exists( 'ktf2021_entry_footer' ) ) :
 	function ktf2021_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'ktf2021' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'ktf2021' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'ktf2021' ) );
@@ -91,23 +85,6 @@ if ( ! function_exists( 'ktf2021_entry_footer' ) ) :
 			);
 			echo '</span>';
 		}
-
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'ktf2021' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 
@@ -127,7 +104,7 @@ if ( ! function_exists( 'ktf2021_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('thumbnail'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

@@ -10,27 +10,31 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
+	<div class="ktf2021-container-white">
+		<div class="ktf2021-content">
+			<div class="d-flex justify-content-center my-2">
 				<?php
-				ktf2021_posted_on();
-				ktf2021_posted_by();
+				if ( is_singular() ) :
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				else :
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
+				endif;
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php ktf2021_post_thumbnail(); ?>
-
+			</div>
+			<div class="d-flex justify-content-around my-2">
+				<?php
+					ktf2021_posted_on();
+					ktf2021_posted_by();
+				?>
+			</div>
+			<div class="d-flex justify-content-center my-2">
+				<?php
+					ktf2021_post_thumbnail();	
+				?>		
+			</div>
+		</div>
+	</div>
+	
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
@@ -45,15 +49,10 @@
 			),
 			get_the_title()
 		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ktf2021' ),
-			'after'  => '</div>',
-		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php ktf2021_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>
 </article><!-- #post-<?php the_ID(); ?> -->

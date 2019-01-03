@@ -422,6 +422,10 @@ h2 {
   font-size: 48px;
 }
 
+h1.entry-title {
+  margin: 0;
+}
+
 p {
   margin-bottom: 1em;
 }
@@ -547,6 +551,12 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%;
+}
+
+/* fontawesome */
+.posted-on i.fas,
+.byline i.fas {
+  margin-right: 5px;
 }
 
 /*--------------------------------------------------------------

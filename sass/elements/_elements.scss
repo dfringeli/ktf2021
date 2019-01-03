@@ -31,3 +31,11 @@ figure {
 }
 
 @import "tables";
+
+/* fontawesome */
+.posted-on,
+.byline {
+	i.fas {
+		margin-right: 5px;
+	}
+}

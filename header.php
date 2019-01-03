@@ -202,7 +202,7 @@
 		});
 
 		function scrollFunction() {
-			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+			if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
 				header.style.height = "130px";
 				if (headerPalme) {
 					headerPalme.style.height = "120px";
