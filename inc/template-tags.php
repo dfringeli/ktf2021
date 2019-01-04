@@ -104,7 +104,7 @@ if ( ! function_exists( 'ktf2021_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail('thumbnail'); ?>
+				<?php the_post_thumbnail('middle'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

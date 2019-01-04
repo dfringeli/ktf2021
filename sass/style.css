@@ -83,7 +83,6 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: 1.2em 0;
 }
 
 /* Grouping content
@@ -390,19 +389,23 @@ template {
   display: none;
 }
 
+.wp-block-image figcaption {
+  color: inherit !important;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,
+.wp-block-image figcaption,
 button,
 input,
 select,
 optgroup,
 textarea {
-  color: #404040;
   font-family: "Arial Narrow", Arial, Helvetica;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 17.6px;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
@@ -422,11 +425,11 @@ h2 {
   font-size: 48px;
 }
 
-h1.entry-title {
-  margin: 0;
+h1, h2 {
+  margin-bottom: 20px;
 }
 
-p {
+figcaption, p {
   margin-bottom: 1em;
 }
 
@@ -998,11 +1001,12 @@ a:hover, a:active {
 
 .footer-navigation-content,
 .ktf2021-content {
-  padding: 1vh 2vw;
+  padding: 1vh 2.5vw;
 }
 
 @media (min-width: 992px) {
   .footer-navigation-content,
+  .header-content,
   .ktf2021-content {
     padding: 1vh 7.5vw;
     -webkit-transform: skewY(1deg);
@@ -1039,14 +1043,19 @@ a:hover, a:active {
   padding-top: 50px;
 }
 
-.site-header.desktop img {
-  height: 125px;
+.site-header.desktop .header-content {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.site-header.desktop .header-logo {
+  height: 200px;
 }
 
 .site-header.desktop .header-palme {
-  top: 0;
+  top: -1px;
   left: 0;
-  height: 200px;
+  height: 400px;
 }
 
 .search-icon {
@@ -1096,7 +1105,7 @@ a:hover, a:active {
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-  margin-top: 120px;
+  margin-top: 135px;
 }
 
 /*--------------------------------------------------------------
@@ -1122,7 +1131,8 @@ a:hover, a:active {
 }
 
 .site-info .site-info-background {
-  background-color: rgba(0, 207, 255, 0.95);
+  background-color: #00cfff;
+  opacity: 0.95;
   padding: 0;
   margin: 0;
 }

@@ -84,14 +84,14 @@
 	</header>
 
 	<header class="site-header desktop d-none d-lg-block fixed-top">
-		<div class="ktf2021-content d-flex justify-content-between">
+		<div class="ktf2021-content header-content d-flex justify-content-between">
 			<?php
 				if ( is_front_page() ) {	
 					echo '<div class="menu-header-palme d-none d-lg-block"><img class="header-palme position-absolute" src="' . get_template_directory_uri() . '/images/palme.svg" /></div>';
 				}
 			?>
 			<a href="<?php echo get_site_url(); ?>" >
-				<img class="position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
+				<img class="header-logo position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
 			</a>
 			<div class="d-flex">
 				<button class="search-icon" onclick="toggleSearch()" type="button">

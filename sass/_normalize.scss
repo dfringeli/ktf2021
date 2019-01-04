@@ -31,7 +31,6 @@ body {
 
 h1 {
 	font-size: 2em;
-	margin: 1.2em 0;
 }
 
 /* Grouping content
@@ -338,4 +337,8 @@ template {
 
 [hidden] {
 	display: none;
+}
+
+.wp-block-image figcaption {
+	color: inherit !important;
 }

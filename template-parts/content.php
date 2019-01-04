@@ -21,16 +21,22 @@
 				endif;
 				?>
 			</div>
-			<div class="d-flex justify-content-around my-2">
-				<?php
-					ktf2021_posted_on();
-					ktf2021_posted_by();
-				?>
+			<div class="d-flex justify-content-center my-2">
+				<div class="mx-5">
+					<?php
+						ktf2021_posted_by();
+					?>
+				</div>
+				<div class="mx-5">
+					<?php
+						ktf2021_posted_on();
+					?>
+				</div>
 			</div>
 			<div class="d-flex justify-content-center my-2">
-				<?php
-					ktf2021_post_thumbnail();	
-				?>		
+				<div class="post-thumbnail">
+					<?php the_post_thumbnail(array('600', '400')); ?>
+				</div><!-- .post-thumbnail -->
 			</div>
 		</div>
 	</div>
