@@ -35,7 +35,6 @@ $skew_negative: -1 * $skew;
 /// Tablet
 @media (min-width: $size__md) {
     .footer-navigation-content,
-    .header-content,
     .ktf2021-content {
         padding: 1vh 7.5vw;
         -webkit-transform: skewY($skew);
@@ -54,9 +53,25 @@ $skew_negative: -1 * $skew;
 @media (min-width: $size__lg) {
     .footer-navigation-content,
     .ktf2021-content {
-        padding: 1vh 15vw;
+        padding: 1vh 14vw;
     }
  }
+
+ /// PC (skewY same as Tablet)
+ @media (min-width: $size__xl) {
+     .footer-navigation-content,
+     .ktf2021-content {
+         padding: 1vh 18vw;
+     }
+  }
+
+  /// PC (skewY same as Tablet)
+  @media (min-width: $size__xxl) {
+      .footer-navigation-content,
+      .ktf2021-content {
+          padding: 1vh 23vw;
+      }
+   }
 
 /*--------------------------------------------------------------
 ## Site Sections

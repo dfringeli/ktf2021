@@ -1008,7 +1008,6 @@ a:hover, a:active {
 
 @media (min-width: 992px) {
   .footer-navigation-content,
-  .header-content,
   .ktf2021-content {
     padding: 1vh 7.5vw;
     -webkit-transform: skewY(1deg);
@@ -1022,7 +1021,21 @@ a:hover, a:active {
 @media (min-width: 1200px) {
   .footer-navigation-content,
   .ktf2021-content {
-    padding: 1vh 15vw;
+    padding: 1vh 14vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer-navigation-content,
+  .ktf2021-content {
+    padding: 1vh 18vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .footer-navigation-content,
+  .ktf2021-content {
+    padding: 1vh 23vw;
   }
 }
 
