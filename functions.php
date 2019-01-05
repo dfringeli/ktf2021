@@ -175,3 +175,44 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function create_message_type() {
+	register_post_type( 'message',
+	  array(
+		'labels' => array(
+		  'name' => __( 'Messages' ),
+		  'singular_name' => __( 'Message' ),
+		  'add_new' => __('Neue Message erstellen'),
+		  'add_new_item' => __('Erstelle eine neue Message'),
+		  'edit_item' => __('Message bearbeiten'),
+		  'new_item' => __('Neue Message'),
+		  'view_item' => __('Message ansehen'),
+		  'view_items' => __('Alle Messages ansehen'),
+		  'search_items' => __('Messages suchen'),
+		  'not_found' => __('Keine Messages gefunden'),
+		  'not_found_in_trash' => __('Keine Messages im Papierkorb gefunden'),
+		  'all_items' => __('Alle Messages'),
+		  'archives' => __('Message-Archiv'),
+		  'attributes' => __('Message Attribute'),
+		  'insert_into_item' => __('In Message einfügen'),
+		  'uploaded_to_this_item' => __('Hochladen'),
+		  'featured_image' => __('Message-Bild'),
+		  'set_featured_image' => __('Message-Bild setzen'),
+		  'remove_featured_image' => __('Message-Bild entfernen'),
+		  'use_featured_image' => __('Message-Bild verwenden'),
+		  'filter_items_list' => __('Filtere Messages'),
+		),
+		'menu_icon' => 'dashicons-format-status',
+		'public' => true,
+		'rewrite' => array( 'slug' => 'message' ),
+		'has_archive' => true,
+		'supports' => array(
+			'title',
+			'editor',
+			'author',
+			'thumbnail'
+		)
+	  )
+	);
+	flush_rewrite_rules( false );
+  }
+add_action( 'init', 'create_message_type' );
