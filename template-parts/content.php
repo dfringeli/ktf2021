@@ -21,13 +21,13 @@
 				endif;
 				?>
 			</div>
-			<div class="d-flex justify-content-center my-2">
-				<div class="mx-5">
+			<div class="d-flex justify-content-between justify-content-md-center my-2">
+				<div class="mx-md-5">
 					<?php
 						ktf2021_posted_by();
 					?>
 				</div>
-				<div class="mx-5">
+				<div class="mx-md-5">
 					<?php
 						ktf2021_posted_on();
 					?>
