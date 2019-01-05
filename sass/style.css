@@ -1179,6 +1179,14 @@ a:hover, a:active {
   color: black;
 }
 
+.ktf2021-container-white a {
+  color: silver;
+}
+
+.ktf2021-container-white a:hover {
+  color: #969696;
+}
+
 .ktf2021-container-black {
   background-color: black;
   color: white;

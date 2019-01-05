@@ -215,6 +215,14 @@ $skew_negative: -1 * $skew;
 .ktf2021-container-white, {
     background-color: $color__white;
     color: $color__black;
+
+    a {
+        color: $color__gray_light;
+    }
+
+    a:hover {
+        color: $color__gray;
+    }
 }
 
 .ktf2021-container-black, {
