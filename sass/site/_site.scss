@@ -220,16 +220,40 @@ $skew_negative: -1 * $skew;
 .ktf2021-container-black, {
     background-color: $color__black;
     color: $color__white;
+
+    a {
+        color: $color__gray_light;
+    }
+
+    a:hover {
+        color: $color__gray;
+    }
 }
 
 .ktf2021-container-blue, {
     background-color: $color__blue_light;
     color: $color__white;
+
+    a {
+        color: $color__white;
+    }
+
+    a:hover {
+        color: $color__black;
+    }
 }
 
 .ktf2021-container-green, {
     background-color: $color__green;
     color: $color__white;
+
+    a {
+        color: $color__black;
+    }
+
+    a:hover {
+        color: $color__gray;
+    }
 }
 
 $carousel_height_lg: 300px;

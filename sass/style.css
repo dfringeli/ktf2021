@@ -671,7 +671,8 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  text-decoration: none;
+  color: #00cfff;
 }
 
 a:visited {
@@ -679,7 +680,8 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #3ca6cd;
+  text-decoration: none;
 }
 
 a:focus {
@@ -1182,14 +1184,38 @@ a:hover, a:active {
   color: white;
 }
 
+.ktf2021-container-black a {
+  color: silver;
+}
+
+.ktf2021-container-black a:hover {
+  color: #969696;
+}
+
 .ktf2021-container-blue {
   background-color: #00cfff;
   color: white;
 }
 
+.ktf2021-container-blue a {
+  color: white;
+}
+
+.ktf2021-container-blue a:hover {
+  color: black;
+}
+
 .ktf2021-container-green {
   background-color: #a3d01e;
   color: white;
+}
+
+.ktf2021-container-green a {
+  color: black;
+}
+
+.ktf2021-container-green a:hover {
+  color: #969696;
 }
 
 .ktf2021-container-carousel {
