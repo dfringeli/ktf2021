@@ -1107,7 +1107,13 @@ a:hover, a:active {
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-  margin-top: 135px;
+  margin-top: 90px;
+}
+
+@media (min-width: 1200px) {
+  .site-content {
+    margin-top: 135px;
+  }
 }
 
 /*--------------------------------------------------------------

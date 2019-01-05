@@ -135,8 +135,15 @@ $skew_negative: -1 * $skew;
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-    margin-top: 135px;
+    margin-top: 90px;
 }
+
+@media (min-width: $size__lg) {
+    .site-content {
+        margin-top: 135px;
+    }
+}
+
 
 /*--------------------------------------------------------------
 ## Footer
@@ -153,8 +160,6 @@ $skew_negative: -1 * $skew;
         padding-bottom: 50px;
     }
 }
-
-/// PC, same as Tablet
 
 .site-info {
     background-color: $color__black;
