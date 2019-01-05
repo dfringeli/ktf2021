@@ -34,10 +34,10 @@
 				</div>
 			</div>
 			<div class="d-flex flex-wrap justify-content-md-start my-2">
-				<div class="post-thumbnail m-2">
+				<div class="post-thumbnail my-2 my-md-2 mr-md-2">
 					<?php the_post_thumbnail(array('500', '300')); ?>
 				</div><!-- .post-thumbnail -->
-				<div class="ktf2021-message m-2">
+				<div class="ktf2021-message my-2 my-md-2 ml-md-2">
 					<?php
 						the_content();
 					?>
