@@ -1065,6 +1065,7 @@ a:hover, a:active {
 
 .site-header.desktop .header-logo {
   height: 200px;
+  margin-top: -20px;
 }
 
 .site-header.desktop .header-palme {
@@ -1120,12 +1121,12 @@ a:hover, a:active {
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
 @media (min-width: 992px) {
   .site-content {
-    margin-top: 130px;
+    margin-top: 140px;
   }
 }
 
@@ -1175,7 +1176,7 @@ a:hover, a:active {
 .ktf2021-container-green,
 .ktf2021-container-carousel,
 .ktf2021-ab-news-container {
-  margin: 2vh 0;
+  margin: 1vh 0;
   padding: 4vh 0;
 }
 
