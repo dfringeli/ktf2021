@@ -1120,12 +1120,12 @@ a:hover, a:active {
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .site-content {
-    margin-top: 135px;
+    margin-top: 130px;
   }
 }
 
@@ -1247,24 +1247,21 @@ a:hover, a:active {
 
 .ktf2021-container-carousel {
   padding: 0;
-  height: 300px;
-  overflow: hidden;
-  z-index: -1;
-  position: relative;
+  height: 200px;
 }
 
 .ktf2021-container-carousel img {
-  height: 300px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .ktf2021-container-carousel {
-    height: 200px;
+    height: 500px;
   }
   .ktf2021-container-carousel img {
-    height: 200px;
+    height: 500px;
   }
 }
 
