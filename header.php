@@ -64,7 +64,6 @@
 	</div>
 </div>
 <div id="page" class="site">
-
 	<header class="site-header mobile d-lg-none fixed-top">
 		<div class="ktf2021-content d-flex justify-content-between">
 			<a href="<?php echo get_site_url(); ?>" >
