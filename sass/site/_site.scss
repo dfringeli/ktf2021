@@ -131,6 +131,7 @@ $skew_negative: -1 * $skew;
 }
 
 .menu-list {
+
     ul {
         margin: 0;
         padding: 0;
@@ -144,6 +145,7 @@ $skew_negative: -1 * $skew;
         -moz-transition:.5s;
         -webkit-transition:.5s;
     }
+    
     a:hover { color: gray; }
 }
 
