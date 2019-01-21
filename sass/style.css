@@ -48,7 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-family: 'Futura';
   font-style: normal;
   font-weight: normal;
-  src: local("Futura Condensed PT Medium"), url("../fonts/futura-condensed-pt-medium-589e44ed1e3a5.woff") format("woff");
+  src: url("../fonts/futura-condensed-pt-medium-589e44ed1e3a5.woff") format("woff"), url("../fonts/futura-condensed-pt-medium-589e44ed1e3a5.otf") format("opentype"), url("../fonts/FuturaCondensedPT-Medium.ttf") format("truetype");
 }
 
 /*--------------------------------------------------------------
