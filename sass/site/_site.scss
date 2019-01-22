@@ -77,11 +77,9 @@ $skew_negative: -1 * $skew;
 ## Site Sections
 --------------------------------------------------------------*/
 /// Mobile
-
 .site-header {
     background-color: $color__background-site-header;
     transition: height 0.1s;
-    z-index: 25; // navigation overlay has z-index 20
 }
 
 .site-header.mobile {
@@ -91,8 +89,6 @@ $skew_negative: -1 * $skew;
 }
 
 .site-header.desktop {
-    margin-top: -50px;
-    padding-top: 50px;
 
     .header-content {
         padding-top: 35px;
@@ -107,6 +103,7 @@ $skew_negative: -1 * $skew;
     .header-palme {
         top: -1px; left: 0;
         height: 400px;
+        transition: height $navigation_fade_animation;
     }
 }
 
@@ -209,8 +206,7 @@ $skew_negative: -1 * $skew;
 .ktf2021-container-black,
 .ktf2021-container-blue,
 .ktf2021-container-green,
-.ktf2021-container-carousel,
-.ktf2021-ab-news-container {
+.ktf2021-container-carousel {
     margin: 1vh 0;
     padding: 4vh 0;
 }
@@ -222,7 +218,7 @@ $skew_negative: -1 * $skew;
     .ktf2021-container-blue,
     .ktf2021-container-green,
     .ktf2021-container-carousel,
-    .ktf2021-ab-news-container,
+    .header-overlay,
     .footer-navigation,
     .site-header.desktop {
         -webkit-transform: skewY($skew_negative);

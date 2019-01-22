@@ -81,7 +81,6 @@
 			</div>
 		</div>
 	</header>
-
 	<header class="site-header desktop d-none d-lg-block fixed-top">
 		<div class="ktf2021-content header-content d-flex justify-content-between">
 			<?php
@@ -112,6 +111,7 @@
 
 		var navigationIcons = document.querySelectorAll('.navigation-icon');
 		var mainNavigations = document.querySelectorAll('.main-navigation');
+		var headerPalmes = document.querySelectorAll('.header-palme');
 
 		var searchIcons = document.querySelectorAll('.search-icon');
 		var mainSearchs = document.querySelectorAll('.main-search');
@@ -130,6 +130,10 @@
 			[...searchIcons].forEach((icon) => {
 				icon.style.opacity = navigationOpen ? "0" : "1";
 				icon.style.visibility = navigationOpen ? "hidden" : "visible";
+			});
+
+			[...headerPalmes].forEach((palme) => {
+				palme.style.height = navigationOpen ? '275px' : '400px';
 			});
 
 			/* Toggle the aria-hidden state on the overlay and the 

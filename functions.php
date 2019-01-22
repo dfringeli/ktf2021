@@ -41,8 +41,13 @@ if ( ! function_exists( 'ktf2021_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'Header' => esc_html__( 'Header', 'ktf2021' ),
-			'Footer' => esc_html__( 'Footer', 'ktf2021' ),
+			'Header-Left' => esc_html__( 'Header-Left', 'ktf2021' ),
+			'Header-Middle' => esc_html__( 'Header-Middle', 'ktf2021' ),
+			'Header-Right' => esc_html__( 'Header-Right', 'ktf2021' ),
+			
+			'Footer-Left' => esc_html__( 'Footer-Left', 'ktf2021' ),
+			'Footer-Middle' => esc_html__( 'Footer-Middle', 'ktf2021' ),
+			'Footer-Right' => esc_html__( 'Footer-Right', 'ktf2021' ),
 		) );
 
 		/*

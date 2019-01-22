@@ -763,83 +763,26 @@ a:hover, a:active {
   cursor: pointer;
 }
 
-.menu {
-  font-size: 1.5em;
+.main-navigation ul,
+.footer-navigation ul {
   list-style: none;
+  font-size: 1.5em;
 }
 
-.menu ul {
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
+.main-navigation ul .sub-menu,
+.footer-navigation ul .sub-menu {
+  margin-left: 1em;
+  font-size: 1em;
 }
 
-.menu ul ul {
-  left: -999em;
-  top: 0;
+.main-navigation ul .sub-menu li,
+.footer-navigation ul .sub-menu li {
+  margin: 0;
 }
 
-.menu ul li:hover > ul,
-.menu ul li.focus > ul {
-  left: 100%;
-}
-
-.menu ul a {
-  width: 200px;
-}
-
-.menu li:hover > ul,
-.menu li.focus > ul {
-  left: auto;
-}
-
-.menu li {
-  position: relative;
+.main-navigation li,
+.footer-navigation li {
   margin: 2vh 0;
-}
-
-.menu a {
-  display: block;
-  text-decoration: none;
-  color: white;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-  .main-navigation ul {
-    display: block;
-  }
-}
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -1049,16 +992,10 @@ a:hover, a:active {
   background-color: black;
   -webkit-transition: height 0.1s;
   transition: height 0.1s;
-  z-index: 25;
 }
 
 .site-header.mobile img {
   height: 100px;
-}
-
-.site-header.desktop {
-  margin-top: -50px;
-  padding-top: 50px;
 }
 
 .site-header.desktop .header-content {
@@ -1075,6 +1012,8 @@ a:hover, a:active {
   top: -1px;
   left: 0;
   height: 400px;
+  -webkit-transition: height 0.75s;
+  transition: height 0.75s;
 }
 
 .search-icon {
@@ -1177,8 +1116,7 @@ a:hover, a:active {
 .ktf2021-container-black,
 .ktf2021-container-blue,
 .ktf2021-container-green,
-.ktf2021-container-carousel,
-.ktf2021-ab-news-container {
+.ktf2021-container-carousel {
   margin: 1vh 0;
   padding: 4vh 0;
 }
@@ -1189,7 +1127,7 @@ a:hover, a:active {
   .ktf2021-container-blue,
   .ktf2021-container-green,
   .ktf2021-container-carousel,
-  .ktf2021-ab-news-container,
+  .header-overlay,
   .footer-navigation,
   .site-header.desktop {
     -webkit-transform: skewY(-1deg);
