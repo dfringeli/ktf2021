@@ -89,6 +89,8 @@ $skew_negative: -1 * $skew;
 }
 
 .site-header.desktop {
+    margin-top: -50px;
+    padding-top: 50px;
 
     .header-content {
         padding-top: 35px;
@@ -129,7 +131,7 @@ $skew_negative: -1 * $skew;
 
 .menu-list {
 
-    padding-left: 33%;
+    padding-left: 5%;
 
     ul {
         margin: 0;
@@ -146,6 +148,12 @@ $skew_negative: -1 * $skew;
     }
     
     a:hover { color: gray; }
+}
+
+@media (min-width: $size__sm) {
+    .menu-list {
+        padding-left: 33%;
+    }
 }
 
 @media (min-width: $size__md) {

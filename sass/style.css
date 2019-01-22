@@ -998,6 +998,11 @@ a:hover, a:active {
   height: 100px;
 }
 
+.site-header.desktop {
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
 .site-header.desktop .header-content {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -1042,7 +1047,7 @@ a:hover, a:active {
 }
 
 .menu-list {
-  padding-left: 33%;
+  padding-left: 5%;
 }
 
 .menu-list ul {
@@ -1061,6 +1066,12 @@ a:hover, a:active {
 
 .menu-list a:hover {
   color: gray;
+}
+
+@media (min-width: 576px) {
+  .menu-list {
+    padding-left: 33%;
+  }
 }
 
 @media (min-width: 768px) {
