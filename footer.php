@@ -16,34 +16,10 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer-navigation sticky-bottom">
 			<div class="footer-navigation-content ktf2021-reveal">
-				<div class="d-md-flex">
-					<div class="flex-fill menu-list">
-						<div class="d-flex justify-content-md-start justify-content-center">
-							<?php
-							wp_nav_menu( array(
-								'menu' => 'menu-left'
-							) );
-							?>
-						</div>
-					</div>
-					<div class="flex-fill menu-list">
-						<div class="d-flex justify-content-center">
-							<?php
-							wp_nav_menu( array(
-								'menu' => 'menu-middle'
-							) );
-							?>
-						</div>
-					</div>
-					<div class="flex-fill menu-list">
-						<div class="d-flex justify-content-md-end justify-content-center">
-							<?php
-							wp_nav_menu( array(
-								'menu' => 'menu-right'
-							) );
-							?>
-						</div>
-					</div>
+				<div class="menu-list d-md-flex justify-content-md-between">
+					<?php wp_nav_menu( array( 'theme_location' => 'Footer-Left', 'container' => false ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'Footer-Middle', 'container' => false ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'Footer-Right', 'container' => false ) ); ?>
 				</div>
 			</div>
 		</div>

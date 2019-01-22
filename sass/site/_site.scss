@@ -58,7 +58,7 @@ $skew_negative: -1 * $skew;
  }
 
  /// PC (skewY same as Tablet)
- @media (min-width: $size__xl) {
+ @media (min-width: $size__xxl) {
      .footer-navigation-content,
      .ktf2021-content {
          padding: 1vh 18vw;
@@ -66,7 +66,7 @@ $skew_negative: -1 * $skew;
   }
 
   /// PC (skewY same as Tablet)
-  @media (min-width: $size__xxl) {
+  @media (min-width: $size__xxxl) {
       .footer-navigation-content,
       .ktf2021-content {
           padding: 1vh 23vw;
@@ -129,6 +129,8 @@ $skew_negative: -1 * $skew;
 
 .menu-list {
 
+    padding-left: 33%;
+
     ul {
         margin: 0;
         padding: 0;
@@ -144,6 +146,12 @@ $skew_negative: -1 * $skew;
     }
     
     a:hover { color: gray; }
+}
+
+@media (min-width: $size__md) {
+    .menu-list {
+        padding-left: 0;
+    }
 }
 
 /*--------------------------------------------------------------

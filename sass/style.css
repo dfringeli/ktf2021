@@ -741,7 +741,7 @@ a:hover, a:active {
   margin-top: 150px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .header-overlay {
     margin-top: 250px;
   }
@@ -952,7 +952,7 @@ a:hover, a:active {
   padding: 1vh 2.5vw;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .footer-navigation-content,
   .ktf2021-content {
     padding: 1vh 7.5vw;
@@ -964,7 +964,7 @@ a:hover, a:active {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .footer-navigation-content,
   .ktf2021-content {
     padding: 1vh 14vw;
@@ -1041,6 +1041,10 @@ a:hover, a:active {
   color: #969696;
 }
 
+.menu-list {
+  padding-left: 33%;
+}
+
 .menu-list ul {
   margin: 0;
   padding: 0;
@@ -1059,6 +1063,12 @@ a:hover, a:active {
   color: gray;
 }
 
+@media (min-width: 768px) {
+  .menu-list {
+    padding-left: 0;
+  }
+}
+
 /*--------------------------------------------------------------
 ## Site Content
 --------------------------------------------------------------*/
@@ -1066,7 +1076,7 @@ a:hover, a:active {
   margin-top: 90px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .site-content {
     margin-top: 140px;
   }
@@ -1101,7 +1111,7 @@ a:hover, a:active {
   margin: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .site-info .site-info-background {
     padding: 40px 0 25px 0;
   }
@@ -1121,7 +1131,7 @@ a:hover, a:active {
   padding: 4vh 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .ktf2021-container-white,
   .ktf2021-container-black,
   .ktf2021-container-blue,
@@ -1198,7 +1208,7 @@ a:hover, a:active {
      object-fit: cover;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .ktf2021-container-carousel {
     height: 500px;
   }
@@ -1246,13 +1256,13 @@ a:hover, a:active {
   text-decoration: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .ktf2021-ab-news-container .is-grid {
     margin: 1vh 7.5vw;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .ktf2021-ab-news-container .is-grid {
     margin: 1vh 15vw;
   }

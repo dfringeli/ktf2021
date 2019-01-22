@@ -16,6 +16,14 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_site_url(); ?>/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_site_url(); ?>/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_site_url(); ?>/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo get_site_url(); ?>/site.webmanifest">
+	<link rel="mask-icon" href="<?php echo get_site_url(); ?>/safari-pinned-tab.svg" color="#a3d01e">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="theme-color" content="<?php echo get_theme_mod('google_chrome_theme'); ?>">
 
 	<?php wp_head(); ?>
 </head>
@@ -32,33 +40,11 @@
 </div>
 <div id="site-navigation" class="main-navigation" aria-hidden="true">
 	<div class="header-overlay">
-		<div class="ktf2021-content d-md-flex">
-			<div class="flex-fill menu-list">
-				<div class="d-flex justify-content-md-start justify-content-center">
-					<?php
-					wp_nav_menu( array(
-						'menu' => 'menu-left'
-					) );
-					?>
-				</div>
-			</div>
-			<div class="flex-fill menu-list">
-				<div class="d-flex justify-content-center">
-					<?php
-					wp_nav_menu( array(
-						'menu' => 'menu-middle'
-					) );
-					?>
-				</div>
-			</div>
-			<div class="flex-fill menu-list">
-				<div class="d-flex justify-content-md-end justify-content-center">
-					<?php
-					wp_nav_menu( array(
-						'menu' => 'menu-right'
-					) );
-					?>
-				</div>
+		<div class="ktf2021-content">
+			<div class="menu-list d-md-flex  justify-content-md-between">
+				<?php wp_nav_menu( array( 'theme_location' => 'Footer-Left', 'container' => false ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'Footer-Middle', 'container' => false ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'Footer-Right', 'container' => false ) ); ?>
 			</div>
 		</div>
 	</div>
