@@ -46,6 +46,11 @@ $skew_negative: -1 * $skew;
 
     .search-container {
         width: 50%;
+        -webkit-transform: skewY($skew);
+        -moz-transform: skewY($skew);
+        -ms-transform: skewY($skew);
+        -o-transform: skewY($skew);
+        transform: skewY($skew);
     }
 }
 

@@ -961,6 +961,8 @@ a:hover, a:active {
   }
   .search-container {
     width: 50%;
+    -webkit-transform: skewY(1deg);
+    transform: skewY(1deg);
   }
 }
 
