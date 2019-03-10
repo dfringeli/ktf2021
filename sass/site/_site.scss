@@ -252,7 +252,7 @@ $skew_negative: -1 * $skew;
 
 /// PC same as Tablet
 
-.ktf2021-container-white, {
+.ktf2021-container-white {
     background-color: $color__white;
     color: $color__black;
 
@@ -265,7 +265,7 @@ $skew_negative: -1 * $skew;
     }
 }
 
-.ktf2021-container-black, {
+.ktf2021-container-black {
     background-color: $color__black;
     color: $color__white;
 
@@ -278,12 +278,12 @@ $skew_negative: -1 * $skew;
     }
 }
 
-.ktf2021-container-blue, {
+.ktf2021-container-blue {
     background-color: $color__blue_light;
     color: $color__white;
 
     a {
-        color: $color__white;
+        color: $color__gray_dark;
     }
 
     a:hover {
@@ -291,7 +291,7 @@ $skew_negative: -1 * $skew;
     }
 }
 
-.ktf2021-container-green, {
+.ktf2021-container-green {
     background-color: $color__green;
     color: $color__white;
 
@@ -327,61 +327,3 @@ $carousel_height_desktop: 500px;
     }
 }
 
-// Look
-.ktf2021-ab-news-container {
-    background-color: $color__black;
-    color: $color__black;
-
-    .is-grid{        
-        margin: 1vh 1vw;
-    }
-
-    article {
-        -webkit-transform: skewY($skew);
-        -moz-transform: skewY($skew);
-        -ms-transform: skewY($skew);
-        -o-transform: skewY($skew);
-        transform: skewY($skew);
-
-        background-color: $color__white;
-        padding: 1vh 1vw;
-
-        .ab-block-post-grid-image,
-        .ab-block-post-grid-byline,
-        .ab-block-post-grid-text p {
-            margin-bottom: 1vh;
-        }
-
-        .ab-block-post-grid-title {
-            margin-bottom: 1vh;
-
-            a {
-                color: $color__black;
-                text-decoration: none;
-            }
-        }
-
-        .ab-block-post-grid-excerpt {
-            font-size: 12px;
-        }
-
-        .ab-block-post-grid-link {
-            text-decoration: none;
-        }
-    }
-}
-
-@media (min-width: $size__md) {
-    .ktf2021-ab-news-container {
-        .is-grid {
-            margin: 1vh 7.5vw;
-        }
-    }
-}
-@media (min-width: $size__lg) {
-    .ktf2021-ab-news-container {
-        .is-grid {
-            margin: 1vh 15vw;
-        }
-    }
- }
