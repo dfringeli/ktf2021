@@ -944,6 +944,10 @@ a:hover, a:active {
   padding: 1vh 2.5vw;
 }
 
+.ktf2021-content-fullwidth {
+  padding: 1vh 0;
+}
+
 @media (min-width: 768px) {
   .footer-navigation-content,
   .ktf2021-content {

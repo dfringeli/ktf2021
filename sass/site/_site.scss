@@ -37,6 +37,10 @@ $marginx-xxxl: 23vw;
     padding: 1vh $marginx-sm;
 }
 
+.ktf2021-content-fullwidth {
+    padding: 1vh 0;
+}
+
 /// Tablet
 @media (min-width: $size__md) {
     .footer-navigation-content,
