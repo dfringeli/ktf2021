@@ -1055,11 +1055,11 @@ a:hover, a:active {
 
 .menu-list a {
   color: white;
-  transition: .5s;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
+  transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
 
 .menu-list a:hover {
@@ -1082,10 +1082,10 @@ a:hover, a:active {
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-  margin-top: 90px;
+  margin-top: 88px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .site-content {
     margin-top: 140px;
   }
@@ -1134,18 +1134,16 @@ a:hover, a:active {
 .ktf2021-container-white,
 .ktf2021-container-black,
 .ktf2021-container-blue,
-.ktf2021-container-green,
-.ktf2021-container-carousel {
-  margin: 1vh 0;
+.ktf2021-container-green {
+  margin: 10px 0;
   padding: 4vh 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .ktf2021-container-white,
   .ktf2021-container-black,
   .ktf2021-container-blue,
   .ktf2021-container-green,
-  .ktf2021-container-carousel,
   .header-overlay,
   .footer-navigation,
   .site-header.desktop {
@@ -1204,26 +1202,6 @@ a:hover, a:active {
 
 .ktf2021-container-green a:hover {
   color: #969696;
-}
-
-.ktf2021-container-carousel {
-  padding: 0;
-  height: 200px;
-}
-
-.ktf2021-container-carousel img {
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media (min-width: 768px) {
-  .ktf2021-container-carousel {
-    height: 500px;
-  }
-  .ktf2021-container-carousel img {
-    height: 500px;
-  }
 }
 
 /*--------------------------------------------------------------
