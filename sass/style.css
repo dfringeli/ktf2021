@@ -708,7 +708,8 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-#navigation-icon, #search-icon {
+#navigation-icon,
+#search-icon {
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -764,7 +765,13 @@ a:hover, a:active {
 .main-navigation ul .sub-menu,
 .footer-navigation ul .sub-menu {
   margin-left: 1em;
-  font-size: 1em;
+  font-size: 0.8em;
+}
+
+.main-navigation ul .sub-menu > li:before,
+.footer-navigation ul .sub-menu > li:before {
+  color: white;
+  content: "> ";
 }
 
 .main-navigation ul .sub-menu li,

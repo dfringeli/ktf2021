@@ -1,80 +1,92 @@
 .main-search {
-	color: $color__white;
-    position: fixed;
-	overflow-y: scroll;
-	top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(0,0,0, 0.9);
-	z-index: 20 !important; // indicators has z-index 15 (bootstrap 4)
+  color: $color__white;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 20 !important; // indicators has z-index 15 (bootstrap 4)
 
-	i {
-		cursor: pointer;
-	}
+  i {
+    cursor: pointer;
+  }
 }
 
-.noscroll { 
-	overflow: hidden;
+.noscroll {
+  overflow: hidden;
 }
 
 $navigation_fade_animation: 0.75s;
 
-#navigation-icon, #search-icon {
-	transition: opacity 0.2s;
+#navigation-icon,
+#search-icon {
+  transition: opacity 0.2s;
 }
 
-[aria-hidden="true"] {    
-    transition: height $navigation_fade_animation, z-index 0s 1s;
-    width: 100vw;
-    z-index: -1; 
-    height: 0;  
+[aria-hidden="true"] {
+  transition: height $navigation_fade_animation, z-index 0s 1s;
+  width: 100vw;
+  z-index: -1;
+  height: 0;
 }
 
-[aria-hidden="false"] {  
-    transition: height $navigation_fade_animation;
-    width: 100%;
-    z-index: 1;  
-    height: 100%; 
+[aria-hidden="false"] {
+  transition: height $navigation_fade_animation;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
 }
 
 .header-overlay {
-	margin-top: 150px;
+  margin-top: 150px;
 }
 
 @media (min-width: $size__md) {
-	.header-overlay {
-		margin-top: 250px;
-	}
+  .header-overlay {
+    margin-top: 250px;
+  }
 }
 
 .main-navigation {
-	color: $color__white;
-	position: fixed; 
-	overflow-y: scroll;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background-color: rgba(0,0,0, 0.9);
-	z-index: 20 !important; // indicators has z-index 15 (bootstrap 4)
-	
-	i {
-		cursor: pointer;
-	}
+  color: $color__white;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 20 !important; // indicators has z-index 15 (bootstrap 4)
+
+  i {
+    cursor: pointer;
+  }
 }
 
 .main-navigation,
 .footer-navigation {
-	ul {
-		list-style: none;
-		font-size: 1.5em;
+  ul {
+    list-style: none;
+    font-size: 1.5em;
 
-		.sub-menu {
-			margin-left: 1em;
-			font-size: 1em;
+    .sub-menu {
+      & > li:before {
+		color: white;
+        content: "> ";
+      }
 
-			li {
-				margin: 0;
-			}
-		}
-	}
+      margin-left: 1em;
+      font-size: 0.8em;
 
-	li {
-		margin: 2vh 0;
-	}
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  li {
+    margin: 2vh 0;
+  }
 }
