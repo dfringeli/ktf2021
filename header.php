@@ -130,7 +130,7 @@
 			body.classList.toggle('noscroll', navigationOpen);
 			var scrollbarPixel = getScrollbarWidth();
 			body.style.marginRight = navigationOpen ? scrollbarPixel + "px" : 0;
-			var scrollbarInPercentage = 100 / $(window).width() * scrollbarPixel;
+			var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
 			[...headerMenus].forEach((menu) => {
 				menu.style.width = navigationOpen ? 100 - scrollbarInPercentage + "%" : "100%";
 			})
@@ -162,7 +162,7 @@
 			body.classList.toggle('noscroll', searchOpen);
 			var scrollbarPixel = getScrollbarWidth();			
 			body.style.marginRight = searchOpen ? scrollbarPixel + "px" : 0;
-			var scrollbarInPercentage = 100 / $(window).width() * scrollbarPixel;
+			var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
 			[...headerMenus].forEach((menu) => {
 				menu.style.width = searchOpen ? 100 - scrollbarInPercentage + "%" : "100%";
 			})
