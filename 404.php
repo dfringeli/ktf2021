@@ -24,7 +24,7 @@ get_header();
 					<div class="ktf2021-content ktf2021-reveal">
 						<h2 class="text-center"><?php esc_html_e( 'Hesch öppis bestimmt gsuecht? Versuechs do mit dr Suechi', 'ktf2021' ); ?></h2>
 						<div class="d-flex justify-content-center">
-							<div class="search-container">
+							<div class="search-container no-skew-y">
 								<?php get_search_form(); ?>
 							</div>
 						</div>
