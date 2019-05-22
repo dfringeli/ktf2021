@@ -1045,7 +1045,7 @@ a:hover, a:active {
 }
 
 .site-header.desktop .header-logo {
-  height: 200px;
+  height: 170px;
   margin-top: -20px;
 }
 
@@ -1127,12 +1127,6 @@ a:hover, a:active {
   .site-content {
     margin-top: 138px;
   }
-}
-
-article.post,
-article.message,
-article.page {
-  margin-top: 30px;
 }
 
 /*--------------------------------------------------------------
