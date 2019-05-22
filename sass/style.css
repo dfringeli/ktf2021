@@ -756,12 +756,12 @@ a:hover, a:active {
 }
 
 .header-overlay {
-  margin-top: 150px;
+  margin-top: 110px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header-overlay {
-    margin-top: 250px;
+    margin-top: 220px;
   }
 }
 
@@ -972,7 +972,8 @@ a:hover, a:active {
 }
 
 .footer-navigation-content,
-.ktf2021-content {
+.ktf2021-content,
+.ktf2021-content-margin {
   padding: 1vh 2.5vw;
 }
 
@@ -982,35 +983,40 @@ a:hover, a:active {
 
 @media (min-width: 768px) {
   .footer-navigation-content,
-  .ktf2021-content {
+  .ktf2021-content,
+  .ktf2021-content-margin {
     padding: 1vh 7.5vw;
-    -webkit-transform: skewY(1deg);
-    transform: skewY(1deg);
   }
   .search-container {
     width: 50%;
-    -webkit-transform: skewY(1deg);
-    transform: skewY(1deg);
   }
 }
 
 @media (min-width: 992px) {
   .footer-navigation-content,
-  .ktf2021-content {
+  .ktf2021-content,
+  .ktf2021-content-margin {
     padding: 1vh 14vw;
+  }
+  .footer-navigation-content,
+  .ktf2021-content {
+    -webkit-transform: skewY(1deg);
+    transform: skewY(1deg);
   }
 }
 
 @media (min-width: 1400px) {
   .footer-navigation-content,
-  .ktf2021-content {
+  .ktf2021-content,
+  .ktf2021-content-margin {
     padding: 1vh 18vw;
   }
 }
 
 @media (min-width: 1600px) {
   .footer-navigation-content,
-  .ktf2021-content {
+  .ktf2021-content,
+  .ktf2021-content-margin {
     padding: 1vh 23vw;
   }
 }
@@ -1114,12 +1120,12 @@ a:hover, a:active {
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-  margin-top: 88px;
+  margin-top: 68px;
 }
 
 @media (min-width: 992px) {
   .site-content {
-    margin-top: 140px;
+    margin-top: 138px;
   }
 }
 
@@ -1176,7 +1182,6 @@ a:hover, a:active {
   .ktf2021-container-black,
   .ktf2021-container-blue,
   .ktf2021-container-green,
-  .header-overlay,
   .footer-navigation,
   .site-header.desktop {
     -webkit-transform: skewY(-1deg);

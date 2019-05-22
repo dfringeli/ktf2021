@@ -40,7 +40,7 @@
 </div>
 <div id="site-navigation" class="main-navigation" aria-hidden="true">
 	<div class="header-overlay">
-		<div class="ktf2021-content">
+		<div class="ktf2021-content-margin">
 			<div class="menu-list d-md-flex  justify-content-md-between">
 				<?php wp_nav_menu( array( 'theme_location' => 'Header-Left', 'container' => false ) ); ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'Header-Middle', 'container' => false ) ); ?>
@@ -119,7 +119,7 @@
 			});
 
 			[...headerPalmes].forEach((palme) => {
-				palme.style.height = navigationOpen ? '275px' : '400px';
+				palme.style.height = navigationOpen ? '245px' : '400px';
 			});
 
 			/* Toggle the aria-hidden state on the overlay and the 

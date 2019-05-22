@@ -33,7 +33,8 @@ $marginx-xxxl: 23vw;
 
 /// Mobile
 .footer-navigation-content,
-.ktf2021-content {
+.ktf2021-content,
+.ktf2021-content-margin {
   padding: 1vh $marginx-sm;
 }
 
@@ -44,37 +45,39 @@ $marginx-xxxl: 23vw;
 /// Tablet
 @media (min-width: $size__md) {
   .footer-navigation-content,
-  .ktf2021-content {
+  .ktf2021-content,
+  .ktf2021-content-margin {
     padding: 1vh $marginx-md;
-    -webkit-transform: skewY($skew);
-    -moz-transform: skewY($skew);
-    -ms-transform: skewY($skew);
-    -o-transform: skewY($skew);
-    transform: skewY($skew);
   }
 
   .search-container {
     width: 50%;
+  }
+}
+
+// PC
+@media (min-width: $size__lg) {
+  .footer-navigation-content,
+  .ktf2021-content,
+  .ktf2021-content-margin {
+    padding: 1vh $marginx-lg;
+  }
+
+  .footer-navigation-content,
+  .ktf2021-content {
     -webkit-transform: skewY($skew);
     -moz-transform: skewY($skew);
     -ms-transform: skewY($skew);
     -o-transform: skewY($skew);
     transform: skewY($skew);
-  }
-}
-
-/// PC (skewY same as Tablet)
-@media (min-width: $size__lg) {
-  .footer-navigation-content,
-  .ktf2021-content {
-    padding: 1vh $marginx-lg;
   }
 }
 
 /// PC (skewY same as Tablet)
 @media (min-width: $size__xxl) {
   .footer-navigation-content,
-  .ktf2021-content {
+  .ktf2021-content,
+  .ktf2021-content-margin  {
     padding: 1vh $marginx-xxl;
   }
 }
@@ -82,7 +85,8 @@ $marginx-xxxl: 23vw;
 /// PC (skewY same as Tablet)
 @media (min-width: $size__xxxl) {
   .footer-navigation-content,
-  .ktf2021-content {
+  .ktf2021-content,
+  .ktf2021-content-margin  {
     padding: 1vh $marginx-xxxl;
   }
 }
@@ -182,12 +186,12 @@ $marginx-xxxl: 23vw;
 ## Site Content
 --------------------------------------------------------------*/
 .site-content {
-  margin-top: 88px;
+  margin-top: 68px;
 }
 
 @media (min-width: $size__lg) {
   .site-content {
-    margin-top: 140px;
+    margin-top: 138px;
   }
 }
 
@@ -243,13 +247,12 @@ $marginx-xxxl: 23vw;
 
 // Tablet like Mobile
 
-/// PC
+// PC
 @media (min-width: $size__lg) {
   .ktf2021-container-white,
   .ktf2021-container-black,
   .ktf2021-container-blue,
   .ktf2021-container-green,
-  .header-overlay,
   .footer-navigation,
   .site-header.desktop {
     -webkit-transform: skewY($skew_negative);

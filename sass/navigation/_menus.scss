@@ -40,12 +40,12 @@ $navigation_fade_animation: 0.75s;
 }
 
 .header-overlay {
-  margin-top: 150px;
+  margin-top: 110px;
 }
 
-@media (min-width: $size__md) {
+@media (min-width: $size__lg) {
   .header-overlay {
-    margin-top: 250px;
+    margin-top: 220px;
   }
 }
 
