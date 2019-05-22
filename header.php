@@ -133,7 +133,7 @@
 			var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
 			[...headerMenus].forEach((menu) => {
 				menu.style.width = navigationOpen ? 100 - scrollbarInPercentage + "%" : "100%";
-			})
+			});
 
 			/* On some mobile browser when the overlay was previously
 				opened and scrolled, if you open it again it doesn't 
@@ -165,7 +165,11 @@
 			var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
 			[...headerMenus].forEach((menu) => {
 				menu.style.width = searchOpen ? 100 - scrollbarInPercentage + "%" : "100%";
-			})
+			});
+
+			[...headerPalmes].forEach((palme) => {
+				palme.style.height = searchOpen ? '245px' : '400px';
+			});
 
 			/* On some mobile browser when the overlay was previously
 				opened and scrolled, if you open it again it doesn't 

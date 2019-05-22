@@ -761,7 +761,7 @@ a:hover, a:active {
 
 @media (min-width: 992px) {
   .header-overlay {
-    margin-top: 220px;
+    margin-top: 230px;
   }
 }
 
@@ -1127,6 +1127,12 @@ a:hover, a:active {
   .site-content {
     margin-top: 138px;
   }
+}
+
+article.post,
+article.message,
+article.page {
+  margin-top: 30px;
 }
 
 /*--------------------------------------------------------------
