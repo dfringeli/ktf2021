@@ -16,13 +16,13 @@ get_header();
 			<section class="error-404 not-found">
 				<div class="ktf2021-container-white">
 					<div class="ktf2021-content ktf2021-reveal">
-						<h1 class="page-title text-center" style="margin-bottom: 0"><?php esc_html_e( 'Uups! Jetzt bisch vom Pfad ab choo', 'ktf2021' ); ?></h1>
+						<h1 class="page-title text-center" style="margin-bottom: 0"><?php esc_html_e( 'Hoppla! Die Site gits leider nid oder nümi.', 'ktf2021' ); ?></h1>
 					</div>
 				</div><!-- .page-header -->
 
 				<div class="ktf2021-container-white">
 					<div class="ktf2021-content ktf2021-reveal">
-						<h2 class="text-center"><?php esc_html_e( 'Hesch öppis bestimmt gsuecht? Versuechs do mit dr Suechi', 'ktf2021' ); ?></h2>
+						<h2 class="text-center"><?php esc_html_e( 'Vielleicht kann Dir die Suche weiterhelfen:', 'ktf2021' ); ?></h2>
 						<div class="d-flex justify-content-center">
 							<div class="search-container no-skew-y">
 								<?php get_search_form(); ?>
