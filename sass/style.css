@@ -603,14 +603,34 @@ input[type="submit"]:focus {
 }
 
 .btn-ktf2021-blue {
-  color: white;
-  background-color: #00cfff;
-  border-color: #00cfff;
+  color: white !important;
+  background-color: #00cfff !important;
+  border-color: #00cfff !important;
 }
 
 .btn-ktf2021-blue:hover {
   background-color: #a3d01e;
   border-color: #a3d01e;
+}
+
+.btn-ktf2021-white {
+  font-family: "Futura", "Arial Narrow", Arial, Helvetica;
+  font-size: 1.5em;
+  border-radius: 0;
+  margin: 1.5vh 0;
+  color: black !important;
+  background-color: white !important;
+  border-color: white !important;
+  transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.btn-ktf2021-white:hover {
+  background-color: #969696 !important;
+  border-color: #969696 !important;
 }
 
 input[type="text"],
