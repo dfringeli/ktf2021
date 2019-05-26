@@ -14,14 +14,9 @@ get_header();
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
-			<div class="ktf2021-container-blue">
+				<div class="ktf2021-container-green">
 					<div class="ktf2021-content ktf2021-reveal">
-						<h1 class="page-title text-center" style="margin-bottom: 0"><?php esc_html_e( 'Hoppla!', 'ktf2021' ); ?></h1>
-					</div>
-				</div>
-				<div class="ktf2021-container-black">
-					<div class="ktf2021-content ktf2021-reveal">
-						<h1 class="page-title text-center" style="margin-bottom: 0"><?php esc_html_e( 'Die Site gits leider nid oder nümi.', 'ktf2021' ); ?></h1>
+						<h1 class="page-title text-center" style="margin-bottom: 0"><?php esc_html_e( 'Hoppla! Die Site gits leider nid oder nümi.', 'ktf2021' ); ?></h1>
 					</div>
 				</div><!-- .page-header -->
 
