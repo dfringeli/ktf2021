@@ -71,7 +71,7 @@
 		<div class="ktf2021-content header-content d-flex justify-content-between">
 			<?php
 				if ( is_front_page() ) {	
-					echo '<div class="menu-header-palme d-none d-lg-block"><img class="header-palme position-absolute" src="' . get_template_directory_uri() . '/images/palme.svg" /></div>';
+					echo '<div class="menu-header-palme d-none d-lg-block"><img class="header-palme position-absolute" src="' . get_template_directory_uri() . '/images/palme_400px.svg" /></div>';
 				}
 			?>
 			<a href="<?php echo get_site_url(); ?>" >
