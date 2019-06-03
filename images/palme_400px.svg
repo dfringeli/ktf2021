@@ -2,10 +2,10 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Palme" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="297.833px" height="400px" viewBox="0 0 297.833 400" style="enable-background:new 0 0 297.833 400;" xml:space="preserve"
-	 class="header-palme position-absolute"
+	 viewBox="0 0 297.833 400" style="enable-background:new 0 0 297.833 400;" xml:space="preserve"
+	 class="header-palme position-absolute invisible"
 	>
-<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#A3D01E;" d="M0,217.641c6.025-11.289,10.155-23.338,12.16-36.285
+<path class="visible" style="fill-rule:evenodd;clip-rule:evenodd;fill:#A3D01E;" d="M0,217.641c6.025-11.289,10.155-23.338,12.16-36.285
 	c0.58-3.775,0.825-7.835,4.062-12.889c1.53,5.19,2.884,8.819,3.659,12.595c2.009,9.764,0.094,19.777,0.116,29.66
 	c0.009,2.903-0.954,6.659,1.48,8.323c3.029,2.07,5.081-1.996,7.656-3.181c2.078-0.972,3.635-3.348,6.547-2.885
 	c-1.906,22.695-2.161,45.2-2.446,67.705c-0.061,4.734-0.261,10.405,4.424,12.928c5.962,3.211,6.004,8.025,4.813,13.592
