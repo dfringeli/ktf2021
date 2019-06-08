@@ -61,3 +61,71 @@ input[type="submit"] {
 	background-color: $color__gray!important;
 	border-color: $color__gray!important;
 }
+
+// Buttons
+.ktf2021-button {
+    border-radius: 0;
+    border-width: 0;
+    cursor: pointer;
+    white-space: nowrap;
+  
+    transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+  
+    .span {
+      padding: 12px 24px;
+    }
+  
+    &.blue {
+      background-color: $color__blue;
+      color: $color__white;
+    }
+  
+    &.blue:hover {
+      background-color: $color__blue_hover;
+      color: $color__white;
+    }
+  
+    &.green {
+      background-color: $color__green;
+      color: $color__white;
+
+      &[aria-expanded=true] {
+          background-color: $color__blue;
+          color: $color__white;
+      }
+
+      &[aria-expanded=true]:hover {
+          background-color: $color__blue_hover;
+          color: $color__white;
+      }
+    }
+  
+    &.green:hover {
+      background-color: $color__green_hover;
+      color: $color__white;
+    }
+  
+    &.black {
+      background-color: $color__black;
+      color: $color__white;
+    }
+  
+    &.black:hover {
+      background-color: $color__black_hover;
+      color: $color__white;
+    }
+  
+    &.white {
+      background-color: $color__white;
+      color: $color__black;
+    }
+  
+    &.white:hover {
+      background-color: $color__gray_light;
+      color: $color__black;
+    }
+  }
