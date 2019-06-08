@@ -64,68 +64,55 @@ input[type="submit"] {
 
 // Buttons
 .ktf2021-button {
-    border-radius: 0;
-    border-width: 0;
-    cursor: pointer;
-    white-space: nowrap;
+    border-radius: 0!important;
+    border-width: 0!important;
+    cursor: pointer!important;
+	white-space: nowrap!important;
+	padding: 12px 24px!important;
   
-    transition: 0.5s;
-    -o-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-  
-    .span {
-      padding: 12px 24px;
-    }
-  
+    transition: 0.5s!important;
+    -o-transition: 0.5s!important;
+    -ms-transition: 0.5s!important;
+    -moz-transition: 0.5s!important;
+	-webkit-transition: 0.5s!important;
+	
     &.blue {
-      background-color: $color__blue;
-      color: $color__white;
+      background-color: $color__blue!important;
+      color: $color__white!important;
     }
   
     &.blue:hover {
-      background-color: $color__blue_hover;
-      color: $color__white;
+      background-color: $color__blue_hover!important;
+      color: $color__white!important;
     }
   
     &.green {
-      background-color: $color__green;
-      color: $color__white;
-
-      &[aria-expanded=true] {
-          background-color: $color__blue;
-          color: $color__white;
-      }
-
-      &[aria-expanded=true]:hover {
-          background-color: $color__blue_hover;
-          color: $color__white;
-      }
+      background-color: $color__green!important;
+      color: $color__white!important;
     }
   
     &.green:hover {
-      background-color: $color__green_hover;
-      color: $color__white;
+      background-color: $color__green_hover!important;
+      color: $color__white!important;
     }
   
     &.black {
-      background-color: $color__black;
-      color: $color__white;
+      background-color: $color__black!important;
+      color: $color__white!important;
     }
   
     &.black:hover {
-      background-color: $color__black_hover;
-      color: $color__white;
+      background-color: $color__black_hover!important;
+      color: $color__white!important;
     }
   
     &.white {
-      background-color: $color__white;
-      color: $color__black;
+      background-color: $color__white!important;
+      color: $color__black!important;
     }
   
     &.white:hover {
-      background-color: $color__gray_light;
-      color: $color__black;
+      background-color: $color__gray_light!important;
+      color: $color__black!important;
     }
   }

@@ -634,69 +634,56 @@ input[type="submit"]:focus {
 }
 
 .ktf2021-button {
-  border-radius: 0;
-  border-width: 0;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.5s;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-}
-
-.ktf2021-button .span {
-  padding: 12px 24px;
+  border-radius: 0 !important;
+  border-width: 0 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  padding: 12px 24px !important;
+  transition: 0.5s !important;
+  -o-transition: 0.5s !important;
+  -ms-transition: 0.5s !important;
+  -moz-transition: 0.5s !important;
+  -webkit-transition: 0.5s !important;
 }
 
 .ktf2021-button.blue {
-  background-color: #00cfff;
-  color: white;
+  background-color: #00cfff !important;
+  color: white !important;
 }
 
 .ktf2021-button.blue:hover {
-  background-color: #3ca6cd;
-  color: white;
+  background-color: #3ca6cd !important;
+  color: white !important;
 }
 
 .ktf2021-button.green {
-  background-color: #a3d01e;
-  color: white;
-}
-
-.ktf2021-button.green[aria-expanded=true] {
-  background-color: #00cfff;
-  color: white;
-}
-
-.ktf2021-button.green[aria-expanded=true]:hover {
-  background-color: #3ca6cd;
-  color: white;
+  background-color: #a3d01e !important;
+  color: white !important;
 }
 
 .ktf2021-button.green:hover {
-  background-color: #8faf1c;
-  color: white;
+  background-color: #8faf1c !important;
+  color: white !important;
 }
 
 .ktf2021-button.black {
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
 }
 
 .ktf2021-button.black:hover {
-  background-color: #2f3030;
-  color: white;
+  background-color: #2f3030 !important;
+  color: white !important;
 }
 
 .ktf2021-button.white {
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
 }
 
 .ktf2021-button.white:hover {
-  background-color: silver;
-  color: black;
+  background-color: silver !important;
+  color: black !important;
 }
 
 input[type="text"],
