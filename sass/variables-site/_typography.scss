@@ -1,15 +1,16 @@
 $font__main: "Arial Narrow", Arial, Helvetica;
-$font__heading: "Futura", "Arial Narrow", Arial, Helvetica;
+$font__heading: "Futura Condensed PT", "Arial Narrow", Arial, Helvetica;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
 @font-face {
-    font-family: 'Futura';
+    font-family: "Futura Condensed PT";
     font-style: normal;
     font-weight: normal;
     src: url('../fonts/futura-condensed-pt-medium-589e44ed1e3a5.woff') format('woff'),
+         url('../fonts/FuturaCondensedPT-Medium.woff2') format('woff2'),
          url('../fonts/futura-condensed-pt-medium-589e44ed1e3a5.otf') format('opentype'),
          url('../fonts/FuturaCondensedPT-Medium.ttf') format('truetype');
 }
