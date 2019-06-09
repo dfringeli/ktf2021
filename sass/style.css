@@ -736,6 +736,30 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# WP Quiz
+--------------------------------------------------------------*/
+.wq-quiz.wq-skin-flat .wq_singleAnswerCtr:hover {
+  background: #8faf1c !important;
+  border: 3px solid #a3d01e !important;
+}
+
+.wq-quiz .wq-results {
+  background: white !important;
+  border-color: white !important;
+}
+
+.wq-share .wq_shareCtr p {
+  visibility: hidden !important;
+}
+
+.wq-share .wq_shareCtr p::after {
+  content: "Teil Dein Resultat: " !important;
+  visibility: visible !important;
+  display: block !important;
+  position: absolute !important;
+}
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------

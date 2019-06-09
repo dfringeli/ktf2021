@@ -1,3 +1,27 @@
 @import "buttons";
 
 @import "fields";
+
+/*--------------------------------------------------------------
+# WP Quiz
+--------------------------------------------------------------*/
+.wq-quiz.wq-skin-flat .wq_singleAnswerCtr:hover {
+  background: $color__green_hover !important;
+  border: 3px solid $color__green !important;
+}
+
+.wq-quiz .wq-results {
+  background: $color__white !important;
+  border-color: $color__white !important;
+}
+
+.wq-share .wq_shareCtr p {
+  visibility: hidden !important;
+
+  &::after {
+    content: "Teil Dein Resultat: " !important;
+    visibility: visible !important;
+    display: block !important;
+    position: absolute !important;
+  }
+}
