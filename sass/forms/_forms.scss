@@ -19,9 +19,10 @@
   visibility: hidden !important;
 
   &::after {
-    content: "Teil Dein Resultat: " !important;
+    content: "Teile Dein Resultat: " !important;
     visibility: visible !important;
     display: block !important;
     position: absolute !important;
+    margin-top: -14px !important;
   }
 }
