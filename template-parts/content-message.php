@@ -36,6 +36,9 @@
 			<div class="d-flex flex-wrap flex-md-nowrap my-2">
 				<div class="post-thumbnail my-2 my-md-2 mr-md-2 w-100">
 					<?php the_post_thumbnail(array('500', '300')); ?>
+					<div class="text-center">
+						<span class="ktf2021-message-image-caption"><?php echo get_the_post_thumbnail_caption(); ?></span>
+					</div>
 				</div><!-- .post-thumbnail -->
 				<div class="ktf2021-message my-2 my-md-2 ml-md-2 w-100">
 					<?php
