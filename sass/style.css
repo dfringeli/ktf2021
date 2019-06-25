@@ -739,7 +739,7 @@ textarea {
 # WP Quiz
 --------------------------------------------------------------*/
 .wq-quiz.wq-skin-flat .wq_singleAnswerCtr:hover {
-  background: #a4d01e50 !important;
+  background: #a4d01e30 !important;
   border: 3px solid #a3d01e !important;
 }
 
@@ -1391,6 +1391,14 @@ object {
 
 .wp-caption-text {
   text-align: center;
+}
+
+.ktf2021-message-image-caption {
+  text-align: center;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: dimgray;
 }
 
 /*--------------------------------------------------------------
