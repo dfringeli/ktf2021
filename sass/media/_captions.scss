@@ -19,5 +19,6 @@
   text-align: center;
   @include font-size(0.9);
   font-style: italic;
+  line-height: 1.2;
   color: $color__gray_dark;
 }
