@@ -17,9 +17,9 @@
 		<div class="footer-navigation sticky-bottom">
 			<div class="footer-navigation-content ktf2021-reveal">
 				<div class="menu-list d-md-flex justify-content-md-between">
-					<?php wp_nav_menu( array( 'theme_location' => 'Footer-Left', 'container' => false ) ); ?>
+					<!-- <?php wp_nav_menu( array( 'theme_location' => 'Footer-Left', 'container' => false ) ); ?> -->
 					<?php wp_nav_menu( array( 'theme_location' => 'Footer-Middle', 'container' => false ) ); ?>
-					<?php wp_nav_menu( array( 'theme_location' => 'Footer-Right', 'container' => false ) ); ?>
+					<!-- <?php wp_nav_menu( array( 'theme_location' => 'Footer-Right', 'container' => false ) ); ?> -->
 				</div>
 			</div>
 		</div>
