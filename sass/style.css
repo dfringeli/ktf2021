@@ -1102,18 +1102,8 @@ a:hover, a:active {
   padding-top: 50px;
 }
 
-.site-header img {
-  height: 100px;
-}
-
-.site-header .header-content {
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-
 .site-header .header-logo {
-  height: 170px;
-  margin-top: -20px;
+  height: 100px;
 }
 
 .site-header .header-palme {
@@ -1122,6 +1112,25 @@ a:hover, a:active {
   height: 400px;
   -webkit-transition: height 0.75s;
   transition: height 0.75s;
+}
+
+.site-header .header-palme.open {
+  height: 200px;
+}
+
+@media (min-width: 992px) {
+  .site-header {
+    margin-top: -50px;
+    padding-top: 50px;
+  }
+  .site-header .header-logo {
+    height: 170px;
+    margin-top: -20px;
+  }
+  .site-header .header-content {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }
 
 .search-icon {
@@ -1218,9 +1227,9 @@ a:hover, a:active {
   display: inline-block;
   width: 0;
   height: 0;
-  border-top: 2vw solid transparent;
-  border-bottom: 2vw solid transparent;
-  border-left: 2vw solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
   border-right: none;
   -webkit-transition: all 400ms;
   transition: all 400ms;

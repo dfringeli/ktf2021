@@ -64,14 +64,14 @@
 	</div>
 	<div id="page" class="site">
 		<header class="site-header fixed-top">
-			<div class="ktf2021-content d-flex justify-content-between">
+			<div class="header-content ktf2021-content d-flex justify-content-between">
 				<?php
 				if (is_front_page()) {
 					echo '<div class="menu-header-palme d-none d-lg-block">' . file_get_contents(get_template_directory_uri() . '/images/palme_400px.svg') . '</div>';
 				}
 				?>
 				<a href="<?php echo get_site_url(); ?>">
-					<img class="position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
+					<img class="header-logo position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
 				</a>
 				<div class="d-flex">
 					<button id="search-toggle" class="search-icon" type="button">
@@ -85,53 +85,25 @@
 				</div>
 			</div>
 		</header>
-		<!-- <header class="site-header mobile d-lg-none fixed-top">
-			<div class="ktf2021-content d-flex justify-content-between">
-				<a href="<?php echo get_site_url(); ?>">
-					<img class="position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
-				</a>
-				<div class="d-flex">
-					<button class="search-icon" onclick="toggleSearch()" type="button">
-						<i class="fas fa-search fa-2x fa-fw"></i>
-					</button>
-					<button class="hamburger hamburger--spin navigation-icon" type="button" data-toggle="collapse" data-target="#site-navigation">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</button>
-				</div>
-			</div>
-		</header>
-		<header class="site-header desktop d-none d-lg-block fixed-top">
-			<div class="ktf2021-content header-content d-flex justify-content-between">
-				<a href="<?php echo get_site_url(); ?>">
-					<img class="header-logo position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
-				</a>
-				<div class="d-flex">
-					<button class="search-icon" onclick="toggleSearch()" type="button">
-						<i class="fas fa-search fa-2x fa-fw"></i>
-					</button>
-					<button class="hamburger hamburger--spin navigation-icon" type="button" data-toggle="collapse" data-target="#site-navigation">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</button>
-				</div>
-			</div>
-		</header> -->
 
 		<script>
+			jQuery(document).ready(function() {
+				var scrollbarPixel = getScrollbarWidth();
+				jQuery("head").append("<style type='text/css'> .scrollbar-width{ width: calc(100% - " + scrollbarPixel + "px); } .scrollbar-margin-right { margin-right: " + scrollbarPixel + "px; } </style>");
+			});
+
 			jQuery('#site-navigation .dropdown-toggle').click(function() {
 				jQuery(this).toggleClass('open');
 				jQuery(this).siblings('ul').toggleClass('open');
 			});
 
 			jQuery('#navigation-toggle').click(function() {
+				jQuery('.site-header').toggleClass('scrollbar-width');
 				jQuery(this).toggleClass('is-active');
-				jQuery('body').toggleClass('noscroll');
+				jQuery('body').toggleClass('noscroll scrollbar-margin-right');
+				jQuery('.header-palme').toggleClass('open');
 				jQuery('#site-navigation').toggleClass('open');
 				jQuery('#search-toggle').toggleClass('hidden');
-
 				if (jQuery('#site-navigation').hasClass('open')) {
 					/* On some mobile browser when the overlay was previously
 					opened and scrolled, if you open it again it doesn't
@@ -141,11 +113,11 @@
 			});
 
 			jQuery('#search-toggle').click(function() {
-				// jQuery(this).toggleClass('is-active');
-				jQuery('body').toggleClass('noscroll');
+				jQuery('.site-header').toggleClass('scrollbar-width');
+				jQuery('body').toggleClass('noscroll scrollbar-margin-right');
+				jQuery('.header-palme').toggleClass('open');
 				jQuery('#site-search').toggleClass('open');
 				jQuery('#navigation-toggle').toggleClass('hidden');
-
 				if (jQuery('#site-search').hasClass('open')) {
 					/* On some mobile browser when the overlay was previously
 					opened and scrolled, if you open it again it doesn't
@@ -153,107 +125,6 @@
 					jQuery('#site-search').scrollTop(0);
 				}
 			});
-
-			// var body = document.body;
-			// var headerMenus = document.querySelectorAll('.site-header');
-
-			// var navigationIcons = document.querySelectorAll('.navigation-icon');
-			// var mainNavigations = document.querySelectorAll('.main-navigation');
-			// var headerPalmes = document.querySelectorAll('.header-palme');
-
-			// var searchIcons = document.querySelectorAll('.search-icon');
-			// var mainSearchs = document.querySelectorAll('.main-search');
-
-			// var navigationOpen = false;
-			// var searchOpen = false;
-
-			// function toggleNavigation() {
-
-			// 	for (let i = 0; i < navigationIcons.length; i++) {
-			// 		const icon = navigationIcons[i];
-			// 		icon.classList.toggle("is-active");				
-			// 	}
-
-			// 	// navigationIcons.forEach(function(icon) {
-			// 	// 	icon.classList.toggle("is-active");				
-			// 	// });
-
-			// 	/* Detect the button class name */
-			// 	navigationOpen = !navigationOpen;
-
-			// 	for (let i = 0; i < searchIcons.length; i++) {
-			// 		const icon = searchIcons[i];
-			// 		icon.style.opacity = navigationOpen ? "0" : "1";
-			// 		icon.style.visibility = navigationOpen ? "hidden" : "visible";				
-			// 	}
-
-			// 	// searchIcons.forEach(function(icon) {
-			// 	// 	icon.style.opacity = navigationOpen ? "0" : "1";
-			// 	// 	icon.style.visibility = navigationOpen ? "hidden" : "visible";
-			// 	// });
-
-			// 	headerPalmes.forEach(function(palme) {
-			// 		palme.style.height = navigationOpen ? '245px' : '400px';
-			// 	});
-
-			// 	/* Toggle the aria-hidden state on the overlay and the 
-			// 		no-scroll class on the body */
-			// 	mainNavigations.forEach(function(nav) {
-			// 		nav.setAttribute('aria-hidden', !navigationOpen);
-			// 	});
-			// 	body.classList.toggle('noscroll', navigationOpen);
-			// 	var scrollbarPixel = getScrollbarWidth();
-			// 	body.style.marginRight = navigationOpen ? scrollbarPixel + "px" : 0;
-			// 	var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
-
-			// 	headerMenus.forEach(function (menu) {
-			// 		menu.style.width = navigationOpen ? 100 - scrollbarInPercentage + "%" : "100%";
-			// 	});
-
-			// 	/* On some mobile browser when the overlay was previously
-			// 		opened and scrolled, if you open it again it doesn't 
-			// 		reset its scrollTop property */
-			// 	setTimeout(function() {
-			// 		mainNavigations.forEach(function(nav) {
-			// 			nav.scrollTop = 0;
-			// 		});
-			// 	}, 750);
-			// }
-
-			// function toggleSearch() {
-
-			// 	searchOpen = !searchOpen;
-
-			// 	navigationIcons.forEach(function(icon) {
-			// 		icon.style.opacity = searchOpen ? "0" : "1";
-			// 		icon.style.visibility = searchOpen ? "hidden" : "visible";
-			// 	});
-
-			// 	/* Toggle the aria-hidden state on the overlay and the 
-			// 		no-scroll class on the body */
-			// 	mainSearchs.forEach(function(search) {
-			// 		search.setAttribute('aria-hidden', !searchOpen);
-			// 	});
-			// 	body.classList.toggle('noscroll', searchOpen);
-			// 	var scrollbarPixel = getScrollbarWidth();			
-			// 	body.style.marginRight = searchOpen ? scrollbarPixel + "px" : 0;
-			// 	var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
-			// 	headerMenus.forEach(function(menu) {
-			// 		menu.style.width = searchOpen ? 100 - scrollbarInPercentage + "%" : "100%";
-			// 	});
-			// 	headerPalmes.forEach(function(palme) {
-			// 		palme.style.height = searchOpen ? '245px' : '400px';
-			// 	});
-
-			// 	/* On some mobile browser when the overlay was previously
-			// 		opened and scrolled, if you open it again it doesn't 
-			// 		reset its scrollTop property */
-			// 	setTimeout(function() {
-			// 		mainSearchs.forEach(function(search) {
-			// 			search.scrollTop = 0;
-			// 		});
-			// 	}, 750);
-			// }
 
 			function getScrollbarWidth() {
 				var outer = document.createElement("div");
