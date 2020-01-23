@@ -90,6 +90,11 @@
 			jQuery(document).ready(function() {
 				var scrollbarPixel = getScrollbarWidth();
 				jQuery("head").append("<style type='text/css'> .scrollbar-width{ width: calc(100% - " + scrollbarPixel + "px); } .scrollbar-margin-right { margin-right: " + scrollbarPixel + "px; } </style>");
+				
+				var isIE = /*@cc_on!@*/false || !!document.documentMode;	// Source: https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+				if (isIE) {
+					jQuery(".menu-header-palme").removeClass("d-lg-block");
+				}
 			});
 
 			jQuery('#site-navigation .dropdown-toggle').click(function() {
