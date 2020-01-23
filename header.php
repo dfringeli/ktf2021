@@ -45,7 +45,7 @@
 			<div class="ktf2021-content-margin">
 				<div class="menu-list d-md-none">
 					<?php wp_nav_menu(array(
-						'theme_location' => 'Header-Middle',
+						'theme_location' => 'Header',
 						'container' => false,
 						'menu_class' => 'menu d-flex flex-wrap',
 						'walker' => new Nav_Walker_Mobile
@@ -53,7 +53,7 @@
 				</div>
 				<div class="menu-list d-none d-md-block">
 					<?php wp_nav_menu(array(
-						'theme_location' => 'Header-Middle',
+						'theme_location' => 'Header',
 						'container' => false,
 						'menu_class' => 'menu d-flex flex-wrap justify-content-around',
 						'walker' => new Nav_Walker_Desktop

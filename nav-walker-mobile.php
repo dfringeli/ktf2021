@@ -199,11 +199,11 @@ if (!class_exists('Nav_Walker_Mobile')) {
 				$title = apply_filters('nav_menu_item_title', $title, $item, $args, $depth);
 
 				$item_output = '<button class="dropdown-toggle d-flex justify-content-between align-items-center">';
-				$item_output .= $args->before;
+				// $item_output .= $args->before;
 				$item_output .= '<span class="title">';
-				$item_output .= $args->link_before . $title . $args->link_after;
+				$item_output .= $title;
 				$item_output .= '</span>';
-				$item_output .= $args->after;
+				// $item_output .= $args->after;
 				$item_output .= '<span class="caret"></span></button>';
 
 				/**

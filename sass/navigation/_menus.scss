@@ -1,4 +1,3 @@
-
 .noscroll {
   overflow: hidden;
 }
@@ -61,34 +60,162 @@ $navigation_fade_animation: 0.75s;
 
 .main-navigation,
 .footer-navigation {
-  ul {
-    list-style: none;
-    font-size: 1.5em;
-
+  .menu-list {
+    .menu,
     .sub-menu {
-      & > li:before {
-        color: white;
-        content: ">";
-        position: absolute;
-        left: -1em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5em;
 
-        transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
-        -o-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
-        -ms-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
-        -moz-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
-        -webkit-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
+      @media (max-width: $size__md) {
+        width: 100%;
       }
+    }
 
-      margin-left: 1em;
-      font-size: 0.8em;
+    .menu {
+      .menu-item {
+        a {
+          color: white;
+          transition: 0.5s;
+          -o-transition: 0.5s;
+          -ms-transition: 0.5s;
+          -moz-transition: 0.5s;
+          -webkit-transition: 0.5s;
+        }
 
-      li:hover:before {
-        left: -0.6em;
+        @media (min-width: $size__md) {
+          a:hover {
+            color: $color__gray;
+          }
+        }
       }
     }
   }
+}
 
-  li {
-    margin: 2vh 0;
+.main-navigation {
+  .menu-list {
+    .menu {
+      @media (max-width: $size__md) {
+        .menu-item-has-children {
+          width: 100%;
+        }
+      }
+
+      .menu-item-has-children {
+        .title {
+          margin: 0;
+        }
+      }
+
+      .menu-item {
+        @media (max-width: $size__md) {
+          margin: 1vh 10vw;
+        }
+        position: relative;
+        margin: 1vh 1.2vw;
+
+        .sub-menu {
+          transition: max-height 400ms;
+          -o-transition: max-height 400ms;
+          -ms-transition: max-height 400ms;
+          -moz-transition: max-height 400ms;
+          -webkit-transition: max-height 400ms;
+          font-size: 0.8em;
+
+          @media (max-width: $size__md) {
+            height: 0;
+            max-height: 0;
+            overflow: hidden;
+          }
+
+          &.open {
+            height: auto;
+            max-height: 100%;
+            -moz-transition: max-height 400ms;
+            transition: max-height 400ms;
+          }
+
+          & > li:before {
+            color: white;
+            content: ">";
+            position: absolute;
+            left: -1em;
+
+            transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
+            -o-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
+            -ms-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
+            -moz-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
+            -webkit-transition: left 0.2s cubic-bezier(0.1, 0.32, 0.4, 1.68);
+          }
+
+          .menu-item {
+            margin: 1vh 3vw;
+          }
+
+          .menu-item:hover:before {
+            left: -0.6em;
+          }
+        }
+
+        .dropdown-toggle {
+          width: 100%;
+          color: $color__white;
+          font-size: 0.8em;
+          float: right;
+          top: 0;
+          right: 0;
+          border: none;
+          background: none;
+          padding: 1.5vh 3vw;
+          cursor: pointer;
+
+          .caret {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid $color__white;
+            border-right: none;
+            transition: all 400ms;
+            -moz-transition: all 400ms;
+          }
+
+          &::after {
+            content: none;
+          }
+
+          &.open {
+            height: auto;
+            max-height: 1000px;
+            -moz-transition: max-height 400ms;
+            transition: max-height 400ms;
+
+            .caret {
+              -moz-transform: rotate(90deg);
+              -webkit-transform: rotate(90deg);
+              -o-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+              -ms-transform-origin: center;
+              -webkit-transform-origin: center;
+              transform-origin: center;
+              -moz-transition: all 400ms;
+              transition: all 400ms;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-navigation {
+  @media (max-width: $size__md) {
+    .menu-item {
+      margin: 1vh 40%;
+    }
   }
 }

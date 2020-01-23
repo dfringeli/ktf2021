@@ -27,9 +27,9 @@ $skew: 1deg;
 $skew_negative: -1 * $skew;
 $marginx-sm: 2.5vw;
 $marginx-md: 7.5vw;
-$marginx-lg: 14vw;
-$marginx-xxl: 18vw;
-$marginx-xxxl: 23vw;
+$marginx-lg: 10vw;
+$marginx-xxl: 17vw;
+$marginx-xxxl: 19vw;
 
 /// Mobile
 .footer-navigation-content,
@@ -151,115 +151,6 @@ $marginx-xxxl: 23vw;
 @media (min-width: $size__md) {
   .search-icon:hover {
     color: $color__gray;
-  }
-}
-
-.menu-list {
-  .menu,
-  .sub-menu {
-    float: left;
-    @media (max-width: $size__md) {
-      width: 100%;
-    }
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .menu-item {
-    @media (max-width: $size__md) {
-      width: 100%;
-      margin: 1vh 5vw;
-    }
-    position: relative;
-    margin: 2vh 3vw;
-
-    p {
-      margin: 0;
-    }
-
-    .sub-menu {
-      @media (max-width: $size__md) {
-        height: 0;
-        max-height: 0;
-        overflow: hidden;
-      }
-      -moz-transition: max-height 400ms;
-      transition: max-height 400ms;
-
-      &.open {
-        height: auto;
-        max-height: 100%;
-        -moz-transition: max-height 400ms;
-        transition: max-height 400ms;
-      }
-    }
-
-    .dropdown-toggle {
-      width: 100%;
-      color: $color__white;
-      font-size: 0.8em;
-      float: right;
-      top: 0;
-      right: 0;
-      border: none;
-      background: none;
-      padding: 1.5vh 3vw;
-      cursor: pointer;
-
-      .caret {
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-left: 10px solid $color__white;
-        border-right: none;
-        transition: all 400ms;
-        -moz-transition: all 400ms;
-      }
-
-      &::after {
-        content: none;
-      }
-
-      &.open {
-        height: auto;
-        max-height: 1000px;
-        -moz-transition: max-height 400ms;
-        transition: max-height 400ms;
-
-        .caret {
-          -moz-transform: rotate(90deg);
-          -webkit-transform: rotate(90deg);
-          -o-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-          -ms-transform-origin: center;
-          -webkit-transform-origin: center;
-          transform-origin: center;
-          -moz-transition: all 400ms;
-          transition: all 400ms;
-        }
-      }
-    }
-  }
-
-  .menu {
-    a {
-      color: white;
-      transition: 0.5s;
-      -o-transition: 0.5s;
-      -ms-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -webkit-transition: 0.5s;
-    }
-
-    @media (min-width: $size__md) {
-      a:hover {
-        color: $color__gray;
-      }
-    }
   }
 }
 
