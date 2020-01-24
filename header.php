@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -12,11 +13,12 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	
+
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_site_url(); ?>/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_site_url(); ?>/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_site_url(); ?>/favicon-16x16.png">
@@ -29,182 +31,130 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="site-search" class="main-search" aria-hidden="true">
-	<div class="header-overlay">
-		<div class="d-flex justify-content-center">
-			<div class="search-container">
-				<?php get_search_form(); ?>
+	<div id="site-search" class="main-search">
+		<div class="header-overlay">
+			<div class="d-flex justify-content-center">
+				<div class="search-container">
+					<?php get_search_form(); ?>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div id="site-navigation" class="main-navigation" aria-hidden="true">
-	<div class="header-overlay">
-		<div class="ktf2021-content-margin">
-			<div class="menu-list d-md-flex  justify-content-md-between">
-				<?php wp_nav_menu( array( 'theme_location' => 'Header-Left', 'container' => false ) ); ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'Header-Middle', 'container' => false ) ); ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'Header-Right', 'container' => false ) ); ?>
+	<div id="site-navigation" class="main-navigation">
+		<div class="header-overlay">
+			<div class="ktf2021-content-margin">
+				<div class="menu-list d-md-none">
+					<?php wp_nav_menu(array(
+						'theme_location' => 'Header',
+						'container' => false,
+						'menu_class' => 'menu d-flex flex-wrap',
+						'walker' => new Nav_Walker_Mobile
+					)); ?>
+				</div>
+				<div class="menu-list d-none d-md-block">
+					<?php wp_nav_menu(array(
+						'theme_location' => 'Header',
+						'container' => false,
+						'menu_class' => 'menu d-flex flex-wrap justify-content-around',
+						'walker' => new Nav_Walker_Desktop
+					)); ?>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div id="page" class="site">
-	<header class="site-header mobile d-lg-none fixed-top">
-		<div class="ktf2021-content d-flex justify-content-between">
-			<a href="<?php echo get_site_url(); ?>" >
-				<img class="position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
-			</a>
-			<div class="d-flex">
-				<button class="search-icon" onclick="toggleSearch()" type="button">
-					<i class="fas fa-search fa-2x fa-fw"></i>
-				</button>
-				<button class="hamburger hamburger--spin navigation-icon" onclick="toggleNavigation()" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
-			</div>
-		</div>
-	</header>
-	<header class="site-header desktop d-none d-lg-block fixed-top">
-		<div class="ktf2021-content header-content d-flex justify-content-between">
-			<?php
-				if ( is_front_page() ) {	
-					echo '<div class="menu-header-palme d-none d-lg-block">' . file_get_contents( get_template_directory_uri() . '/images/palme_400px.svg' ) . '</div>';
+	<div id="page" class="site">
+		<header class="site-header fixed-top">
+			<div class="header-content ktf2021-content d-flex justify-content-between">
+				<?php
+				if (is_front_page()) {
+					echo '<div class="menu-header-palme d-none d-lg-block">' . file_get_contents(get_template_directory_uri() . '/images/palme_400px.svg') . '</div>';
 				}
-			?>
-			<a href="<?php echo get_site_url(); ?>" >
-				<img class="header-logo position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
-			</a>
-			<div class="d-flex">
-				<button class="search-icon" onclick="toggleSearch()" type="button">
-					<i class="fas fa-search fa-2x fa-fw"></i>
-				</button>
-				<button class="hamburger hamburger--spin navigation-icon" onclick="toggleNavigation()" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
+				?>
+				<a href="<?php echo get_site_url(); ?>">
+					<img class="header-logo position-absolute" src="<?php echo get_template_directory_uri() . "/images/ktf2021-logo-slogan.svg" ?>" />
+				</a>
+				<div class="d-flex">
+					<button id="search-toggle" class="search-icon" type="button">
+						<i class="fas fa-search fa-2x fa-fw"></i>
+					</button>
+					<button id="navigation-toggle" class="hamburger hamburger--spin navigation-icon" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-	<script>
-
-		var body = document.body;
-		var headerMenus = document.querySelectorAll('.site-header');
-
-		var navigationIcons = document.querySelectorAll('.navigation-icon');
-		var mainNavigations = document.querySelectorAll('.main-navigation');
-		var headerPalmes = document.querySelectorAll('.header-palme');
-
-		var searchIcons = document.querySelectorAll('.search-icon');
-		var mainSearchs = document.querySelectorAll('.main-search');
-
-		var navigationOpen = false;
-		var searchOpen = false;
-
-		function toggleNavigation() {
-			
-			[...navigationIcons].forEach((icon) => {
-				icon.classList.toggle("is-active");
+		<script>
+			jQuery(document).ready(function() {
+				var scrollbarPixel = getScrollbarWidth();
+				jQuery("head").append("<style type='text/css'> .scrollbar-width{ width: calc(100% - " + scrollbarPixel + "px); } .scrollbar-margin-right { margin-right: " + scrollbarPixel + "px; } </style>");
+				
+				var isIE = /*@cc_on!@*/false || !!document.documentMode;	// Source: https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+				if (isIE) {
+					jQuery(".menu-header-palme").removeClass("d-lg-block");
+				}
 			});
 
-			/* Detect the button class name */
-			navigationOpen = !navigationOpen;
-			[...searchIcons].forEach((icon) => {
-				icon.style.opacity = navigationOpen ? "0" : "1";
-				icon.style.visibility = navigationOpen ? "hidden" : "visible";
+			jQuery('#site-navigation .dropdown-toggle').click(function() {
+				jQuery(this).toggleClass('open');
+				jQuery(this).siblings('ul').toggleClass('open');
 			});
 
-			[...headerPalmes].forEach((palme) => {
-				palme.style.height = navigationOpen ? '245px' : '400px';
+			jQuery('#navigation-toggle').click(function() {
+				jQuery('.site-header').toggleClass('scrollbar-width');
+				jQuery(this).toggleClass('is-active');
+				jQuery('body').toggleClass('noscroll scrollbar-margin-right');
+				jQuery('.header-palme').toggleClass('open');
+				jQuery('#site-navigation').toggleClass('open');
+				jQuery('#search-toggle').toggleClass('hidden');
+				if (jQuery('#site-navigation').hasClass('open')) {
+					/* On some mobile browser when the overlay was previously
+					opened and scrolled, if you open it again it doesn't
+					reset its scrollTop property after the fadeout */
+					jQuery('#site-navigation').scrollTop(0);
+				}
 			});
 
-			/* Toggle the aria-hidden state on the overlay and the 
-				no-scroll class on the body */
-			[...mainNavigations].forEach((nav) => {
-				nav.setAttribute('aria-hidden', !navigationOpen);
-			});
-			body.classList.toggle('noscroll', navigationOpen);
-			var scrollbarPixel = getScrollbarWidth();
-			body.style.marginRight = navigationOpen ? scrollbarPixel + "px" : 0;
-			var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
-			[...headerMenus].forEach((menu) => {
-				menu.style.width = navigationOpen ? 100 - scrollbarInPercentage + "%" : "100%";
-			});
-
-			/* On some mobile browser when the overlay was previously
-				opened and scrolled, if you open it again it doesn't 
-				reset its scrollTop property */
-			setTimeout(function() {
-				[...mainNavigations].forEach((nav) => {
-					nav.scrollTop = 0;
-				});
-			}, 750);
-		}
-		
-		function toggleSearch() {
-
-			searchOpen = !searchOpen;
-
-			[...navigationIcons].forEach((icon) => {
-				icon.style.opacity = searchOpen ? "0" : "1";
-				icon.style.visibility = searchOpen ? "hidden" : "visible";
+			jQuery('#search-toggle').click(function() {
+				jQuery('.site-header').toggleClass('scrollbar-width');
+				jQuery('body').toggleClass('noscroll scrollbar-margin-right');
+				jQuery('.header-palme').toggleClass('open');
+				jQuery('#site-search').toggleClass('open');
+				jQuery('#navigation-toggle').toggleClass('hidden');
+				if (jQuery('#site-search').hasClass('open')) {
+					/* On some mobile browser when the overlay was previously
+					opened and scrolled, if you open it again it doesn't
+					reset its scrollTop property after the fadeout */
+					jQuery('#site-search').scrollTop(0);
+				}
 			});
 
-			/* Toggle the aria-hidden state on the overlay and the 
-				no-scroll class on the body */
-			[...mainSearchs].forEach((search) => {
-				search.setAttribute('aria-hidden', !searchOpen);
-			});
-			body.classList.toggle('noscroll', searchOpen);
-			var scrollbarPixel = getScrollbarWidth();			
-			body.style.marginRight = searchOpen ? scrollbarPixel + "px" : 0;
-			var scrollbarInPercentage = 100 / window.innerWidth * scrollbarPixel;
-			[...headerMenus].forEach((menu) => {
-				menu.style.width = searchOpen ? 100 - scrollbarInPercentage + "%" : "100%";
-			});
+			function getScrollbarWidth() {
+				var outer = document.createElement("div");
+				outer.style.visibility = "hidden";
+				outer.style.width = "100px";
+				outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
 
-			[...headerPalmes].forEach((palme) => {
-				palme.style.height = searchOpen ? '245px' : '400px';
-			});
+				document.body.appendChild(outer);
 
-			/* On some mobile browser when the overlay was previously
-				opened and scrolled, if you open it again it doesn't 
-				reset its scrollTop property */
-			setTimeout(function() {
-				[...mainSearchs].forEach((search) => {
-					search.scrollTop = 0;
-				});
-			}, 750);
-		}
+				var widthNoScroll = outer.offsetWidth;
+				// force scrollbars
+				outer.style.overflow = "scroll";
 
-		function getScrollbarWidth() {
-			var outer = document.createElement("div");
-			outer.style.visibility = "hidden";
-			outer.style.width = "100px";
-			outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+				// add innerdiv
+				var inner = document.createElement("div");
+				inner.style.width = "100%";
+				outer.appendChild(inner);
 
-			document.body.appendChild(outer);
+				var widthWithScroll = inner.offsetWidth;
 
-			var widthNoScroll = outer.offsetWidth;
-			// force scrollbars
-			outer.style.overflow = "scroll";
+				// remove divs
+				outer.parentNode.removeChild(outer);
 
-			// add innerdiv
-			var inner = document.createElement("div");
-			inner.style.width = "100%";
-			outer.appendChild(inner);        
+				return widthNoScroll - widthWithScroll;
+			}
+		</script>
 
-			var widthWithScroll = inner.offsetWidth;
-
-			// remove divs
-			outer.parentNode.removeChild(outer);
-
-			return widthNoScroll - widthWithScroll;
-		}
-	</script>
-
-	<div id="content" class="site-content">
+		<div id="content" class="site-content">

@@ -41,9 +41,7 @@ if ( ! function_exists( 'ktf2021_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'Header-Left' => esc_html__( 'Header-Left', 'ktf2021' ),
-			'Header-Middle' => esc_html__( 'Header-Middle', 'ktf2021' ),
-			'Header-Right' => esc_html__( 'Header-Right', 'ktf2021' ),
+			'Header' => esc_html__( 'Header', 'ktf2021' ),
 			
 			'Footer-Left' => esc_html__( 'Footer-Left', 'ktf2021' ),
 			'Footer-Middle' => esc_html__( 'Footer-Middle', 'ktf2021' ),
@@ -129,6 +127,16 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Nav Walker Mobile
+ */
+require get_template_directory() . '/nav-walker-mobile.php';
+
+/**
+ * Nav Walker Desktop
+ */
+require get_template_directory() . '/nav-walker-desktop.php';
 
 /**
  * Load Jetpack compatibility file.

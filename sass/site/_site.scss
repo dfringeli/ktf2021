@@ -27,9 +27,9 @@ $skew: 1deg;
 $skew_negative: -1 * $skew;
 $marginx-sm: 2.5vw;
 $marginx-md: 7.5vw;
-$marginx-lg: 14vw;
-$marginx-xxl: 18vw;
-$marginx-xxxl: 23vw;
+$marginx-lg: 10vw;
+$marginx-xxl: 17vw;
+$marginx-xxxl: 19vw;
 
 /// Mobile
 .footer-navigation-content,
@@ -98,26 +98,12 @@ $marginx-xxxl: 23vw;
 .site-header {
   background-color: $color__background-site-header;
   transition: height 0.1s;
-}
 
-.site-header.mobile {
-  img {
-    height: 100px;
-  }
-}
-
-.site-header.desktop {
   margin-top: -50px;
   padding-top: 50px;
 
-  .header-content {
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
-
   .header-logo {
-    height: 170px;
-    margin-top: -20px;
+    height: 100px;
   }
 
   .header-palme {
@@ -125,11 +111,29 @@ $marginx-xxxl: 23vw;
     left: 0;
     height: 400px;
     transition: height $navigation_fade_animation;
+
+    &.open {
+      height: 200px;
+    }
+  }
+
+  @media (min-width: $size__lg) {
+    margin-top: -50px;
+    padding-top: 50px;
+
+    .header-logo {
+      height: 170px;
+      margin-top: -20px;
+    }
+
+    .header-content {
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
   }
 }
 
 .search-icon {
-  padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
   transition-property: color, filter;
@@ -144,41 +148,9 @@ $marginx-xxxl: 23vw;
   overflow: visible;
 }
 
-.search-icon:hover {
-  color: $color__gray;
-}
-
-.menu-list {
-  padding-left: 5%;
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  a {
-    color: white;
-    transition: 0.5s;
-    -o-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-  }
-
-  a:hover {
-    color: gray;
-  }
-}
-
-@media (min-width: $size__sm) {
-  .menu-list {
-    padding-left: 33%;
-  }
-}
-
 @media (min-width: $size__md) {
-  .menu-list {
-    padding-left: 0;
+  .search-icon:hover {
+    color: $color__gray;
   }
 }
 
@@ -236,6 +208,9 @@ $marginx-xxxl: 23vw;
   }
 }
 
+/*--------------------------------------------------------------
+## KTF2021 Containers
+--------------------------------------------------------------*/
 /// Mobile
 .ktf2021-container-white,
 .ktf2021-container-black,
@@ -254,7 +229,7 @@ $marginx-xxxl: 23vw;
   .ktf2021-container-blue,
   .ktf2021-container-green,
   .footer-navigation,
-  .site-header.desktop {
+  .site-header {
     -webkit-transform: skewY($skew_negative);
     -moz-transform: skewY($skew_negative);
     -ms-transform: skewY($skew_negative);
@@ -271,8 +246,10 @@ $marginx-xxxl: 23vw;
     color: $color__gray_light;
   }
 
-  a:hover {
-    color: $color__gray;
+  @media (min-width: $size__md) {
+    a:hover {
+      color: $color__gray;
+    }
   }
 }
 
@@ -284,8 +261,10 @@ $marginx-xxxl: 23vw;
     color: $color__gray_light;
   }
 
-  a:hover {
-    color: $color__gray;
+  @media (min-width: $size__md) {
+    a:hover {
+      color: $color__gray;
+    }
   }
 }
 
@@ -297,8 +276,10 @@ $marginx-xxxl: 23vw;
     color: $color__gray_dark;
   }
 
-  a:hover {
-    color: $color__black;
+  @media (min-width: $size__md) {
+    a:hover {
+      color: $color__black;
+    }
   }
 }
 
@@ -310,7 +291,9 @@ $marginx-xxxl: 23vw;
     color: $color__black;
   }
 
-  a:hover {
-    color: $color__gray;
+  @media (min-width: $size__md) {
+    a:hover {
+      color: $color__gray;
+    }
   }
 }
