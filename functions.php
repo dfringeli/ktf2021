@@ -8,13 +8,14 @@
  */
 
 
-add_action( 'init', 'francais_language_redirect' );
+add_action( 'wp', 'francais_language_redirect' );
 
 function francais_language_redirect(){
-    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
     if( $lang == "fr" ) {
-        if( is_home() ) {
-             $url = get_home_url()."/francais/";
+        if( is_front_page() ) {
+			print($lang);
+			$url = get_home_url()."/francais/";
              wp_redirect( $url );
          }
     }
