@@ -7,6 +7,20 @@
  * @package ktf2021
  */
 
+
+add_action( 'wp', 'francais_language_redirect' );
+
+function francais_language_redirect(){
+	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    if( $lang == "fr" ) {
+        if( is_front_page() ) {
+			print($lang);
+			$url = get_home_url()."/francais/";
+             wp_redirect( $url );
+         }
+    }
+}
+
 if ( ! function_exists( 'ktf2021_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
